@@ -1,0 +1,90 @@
+<html> 
+<header>
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+<title> Math 10B Discussion Section </title>
+</header>
+
+<!--<p style="font-family:verdana;font-size:110%;color:green"> -->
+
+<div>
+				<h1 style="text-align:left">
+						Math 10B
+				</h1>
+				<h3 style="text-align:left">
+						Section 101: 1-2 pm, 45 Evans <br/>
+						Section 106: 12-1 pm, 41 Evans
+				</h3>
+</div>
+
+<div>
+<h4>GSI: <a href="math.berkeley.edu/~zhrosen/">Zvi Rosen</a></h4>
+
+
+<p><b>Email address: </b><script type="text/javascript">
+GoFish=new Array()
+GoFish[0]="%3c%61%20%68%72%65%66%3d%" + "22%6d%61%69%6c%74%6f%3a"
+GoFish[1]="zhrosen" + "%40%6d%61%74%68%2e%62%65%72%6b%"
+GoFish[2]="65%6c%65%79%2e%65%64%75%22%3e" + "zhrosen"
+GoFish[3]="%40%6d%61%74%68%2e%62%65%" + "72%6b%65%6c%65%79%2e%65%6"
+GoFish[4]="4%75%3c%2f%61%3e" + ""
+OutString="";
+for (j=0;j<GoFish.length;j++){
+OutString+=GoFish[j];
+}document.write(unescape(OutString));
+</script>
+</p>
+
+<p><b>Office: </b>845 Evans Hall
+</p>
+
+<p style="text-align:left"><b>Office Hours:</b><br/>
+Mondays:  3 - 4<br/>
+Thursdays: 3:45 - 4:45<br/>
+</p>
+</div>
+
+<div>
+<p>
+<b>bCourses Page:</b> <a href="https://bcourses.berkeley.edu/courses/1195556">https://bcourses.berkeley.edu/courses/1195556</a>
+</p>
+
+<p>
+Quizzes and Homeworks along with solutions will be posted on the bCourses page.
+</p>
+
+<h3 style="text-align:left">
+						Supplementary materials:
+				</h3>
+
+
+<table cellspacing=0 cellpadding=3 border=1 align = "center">
+
+<tr bgcolor=#e0e0ff>
+
+<th>Date</th>
+<th>Links, Handouts, Etc.</th>
+</tr>
+
+<TR align="center">
+
+<TD>1/22</TD>
+<td>
+<a href="http://math.berkeley.edu/~zhrosen/S2014-10B/10Bsyll+ws1.pdf">Syllabus & Worksheet 1</a>
+</td>
+</TR>
+
+<TR align="center">
+
+<TD>1/22</TD>
+<td>
+<a href="http://math.berkeley.edu/~zhrosen/S2014-10B/ws2.pdf">Worksheet 2</a>, <a href="http://math.berkeley.edu/~zhrosen/S2014-10B/ws2soln.pdf">Solutions</a>
+</td>
+</TR>
+
+
+</table>
+
+</div>
+ 
+</body> 
+</html> 

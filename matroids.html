@@ -1,0 +1,72 @@
+<html> 
+<header>
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+<title> Computing Algebraic Matroids </title>
+</header>
+
+<!--<p style="font-family:verdana;font-size:110%;color:green"> -->
+
+<div>
+				<h1> Computing Algebraic Matroids 
+				</h1>
+
+</div>
+
+<div>
+<h3>
+Symbolic Algebra:
+</h3>
+  <p>
+  We have implemented the symbolic algorithm in <a
+  href="http://www.math.uiuc.edu/Macaulay2/">Macaulay2</a>. The
+  code is in the file  <a
+  href="matroids.m2">matroids.m2</a>.
+  </p>
+<br>
+  
+</div>
+
+<div>
+<h3>
+Linear Algebra and Numerical Algebraic Geometry:
+</h3>
+  <p>
+ This algorithm breaks up into a few steps:
+  <ol>
+    <li>
+    Generate a numerical Jacobian matrix, in one of the following ways:
+    <ol>
+      <li>
+      Compute a Jacobian symbolically, and then specialize to a
+      generic point of the variety. A generic point can be obtained
+      for a parametrization by choosing random values for the
+      parameters, and for a variety defined by its ideal using <a
+  href="https://bertini.nd.edu/">Bertini</a> Tracktype:1.
+      </li>
+      <li>
+      Compute the Jacobian numerically using  <a
+  href="https://bertini.nd.edu/">Bertini</a>: Run Tracktype:1, save a
+      witness point from main_data in start, and run Tracktype:-3.
+      </li>
+      </ol>
+    </li>
+    <li>
+    Use numerical linear algebra, in Sage, Maple, or MATLAB, to
+    compute a list of bases and circuits from the Jacobian matrix.
+    </li>
+    <li>
+    Run <a
+  href="https://bertini.nd.edu/">Bertini</a>, Tracktype:5 on a list of projection vectors and
+    extract the degree of the projection for the circuit degree, and
+    the degree of the fiber for the base degree. Sample Bash scripts
+    for this are: <a
+  href="decBases.sh">decBases.sh</a> and <a
+  href="decCircs.sh">decCircs.sh</a>.
+    </li>
+    </ol>
+<br>
+  </p>
+</div>
+
+</body> 
+</html> 

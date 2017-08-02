@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://localhost:8080/home/admin/16/print -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Completability of Independence Tables -- Sage</title>
+        
+	
+        
+        <link type="text/css" rel="stylesheet" href="./completion_files/main.css">
+        
+        
+        <script type="text/javascript" src="./completion_files/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="./completion_files/localization.js"></script>
+        <script type="text/javascript" src="./completion_files/json2.min.js"></script>
+        
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="http://localhost:8080/javascript/jqueryui/css/sage/jquery-ui-1.8.11.custom.css">
+<script type="text/javascript" src="./completion_files/jquery-ui-1.8.11.custom.min.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="./completion_files/farbtastic.css" type="text/css">
+<script type="text/javascript" src="./completion_files/farbtastic.min.js"></script>
+<script type="text/javascript" src="./completion_files/jquery.event.extendedclick.min.js"></script>
+<script type="text/javascript" src="./completion_files/jquery.form.min.js"></script>
+<script type="text/javascript" src="./completion_files/jquery.bgiframe.min.js"></script>
+<link rel="stylesheet" href="./completion_files/jPicker-1.1.6.min.css" type="text/css">
+<script type="text/javascript" src="./completion_files/jpicker-1.1.6.min.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="./completion_files/colorpicker.css">
+<script type="text/javascript" src="./completion_files/colorpicker.min.js"></script>
+<script type="text/javascript" src="./completion_files/ui.achtung-mod.min.js"></script>
+
+
+<script type="text/javascript" src="./completion_files/notebook_lib.js"></script>
+<script type="text/javascript" src="./completion_files/notebook_dynamic.js"></script>
+
+
+
+<script type="text/javascript" src="./completion_files/MathJax.js"></script>
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="./completion_files/sage3d.js"></script>
+
+<!-- Jmol - embedded 3D graphics -->
+<script type="text/javascript" src="./completion_files/Jmol.js"></script>
+<!-- This must stay in head -->
+<script>jmolInitialize("/java/jmol");jmolSetCallback("menuFile","/java/jmol/appletweb/SageMenu.mnu");</script>
+
+
+<!-- TinyMCE and jEditable - in-place editing of text cells -->
+<script type="text/javascript" src="./completion_files/tiny_mce.js"></script>
+<script type="text/javascript" src="./completion_files/jquery.jeditable.mini.js" charset="utf-8"></script>
+<script type="text/javascript" src="./completion_files/tinymce.js"></script>
+<script type="text/javascript" src="./completion_files/embed.js"></script>
+
+
+<script type="text/javascript">user_name= "guest";</script>
+
+<script type="text/javascript">
+    worksheet_filename = "admin/16";
+    worksheet_name = 'Completability of Independence Tables';
+    
+        server_ping_while_alive();
+    
+</script>
+
+
+
+        
+        
+        
+        <script type="text/javascript" src="./completion_files/master.js"></script>
+    <style type="text/css"></style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+.MathJax .mo, .MathJax .mi {color: inherit ! important}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+    <body id="print-page" class=""><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+        
+<h1>Completability of Independence Tables</h1>
+
+
+
+
+    
+
+
+<div class="cell_input_active" id="cell_resizer"></div>
+<div class="worksheet_cell_list" id="worksheet_cell_list">
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_52" class="cell_visible">
+    <div id="cell_52" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Example Graph 1
+var('r1,r2,r3,r4,r5,c1,c2,c3,c4,c5');
+R = [r1,r2,r3,r4,r5]; C = [c1,c2,c3,c4,c5];
+G = Graph({r1:{c1:0.05,c2:0},r2:{c5:.09},r3:{c3:.04,c5:.06},r4:{c4:.02},r5:{c2:0,c4:0,c5:0}})&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_52" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_52">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_52">
+                            <div class="cell_output_print_wrap" id="cell_output_52">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_52">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_60" class="cell_visible">
+    <div id="cell_60" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Example Graph 2
+var('r1,r2,c1,c2,c3');
+R = [r1,r2]; C = [c1,c2,c3];
+G = Graph({r1:{c1:0.05,c2:0.1},r2:{c2:.03},c3:{}})&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_60" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_60">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_60">
+                            <div class="cell_output_print_wrap" id="cell_output_60">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_60">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_61" class="cell_visible">
+    <div id="cell_61" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Example Graph 3
+var('r1,r2,c1,c2,c3');
+R = [r1,r2,r3]; C = [c1,c2,c3,c4];
+G = Graph({r1:{c1:0,c2:0.01,c3:0.02},r2:{c3:.04},r3:{c4:.09,c5:.12},r4:{c5:.16}})&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_61" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_61">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_61">
+                            <div class="cell_output_print_wrap" id="cell_output_61">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_61">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_54" class="cell_visible">
+    <div id="cell_54" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">G.plot(edge_labels =true)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_54" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_54">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_54">
+                            <div class="cell_output_print_wrap" id="cell_output_54">
+                                
+                                    <pre class="shrunk"><font color="black"><img src="./completion_files/sage0.png"></font></pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_54">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_56" class="cell_visible">
+    <div id="cell_56" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">import copy;&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_56" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_56">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_56">
+                            <div class="cell_output_print_wrap" id="cell_output_56">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_56">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_21" class="cell_visible">
+    <div id="cell_21" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Define the cycle-check function to check rank 1 conditions.
+def cycle_check(G):
+    L = G.cycle_basis('edge');
+    checks = [];
+    for cyc in L:
+        p1 = prod([e[2] for e in cyc if cyc.index(e) % 2 == 0]);
+        p2 = prod([e[2] for e in cyc if cyc.index(e) % 2 == 1]);
+        checks.append(p1 == p2);
+    return all(checks)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_21" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_21">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_21">
+                            <div class="cell_output_print_wrap" id="cell_output_21">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_21">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_29" class="cell_visible">
+    <div id="cell_29" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Define the rank-1 closure function.
+
+def new_edge_value(G,e):
+    #Assigns the value for a new edge e = [v1,v2]
+    P = (G.edge_disjoint_paths(e[0],e[1]))[0];
+    p1 = prod([G.edge_label(P[i],P[i+1]) for i in range(len(P)-1) if i % 2 == 0]);
+    p2 = prod([G.edge_label(P[i],P[i+1]) for i in range(len(P)-1) if i % 2 == 1]);
+    return p1/p2
+
+def r1_closure(G):
+    L = G.connected_components();
+    for H in L:
+        Rh = [v for v in R if v in H];
+        Ch = [v for v in C if v in H];
+        newedges = [[v,w] for v in Rh for w in Ch if not G.has_edge(v,w)];
+        for e in newedges:
+            G.add_edge((e[0],e[1],new_edge_value(G,e)))
+    return G&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_29" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_29">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_29">
+                            <div class="cell_output_print_wrap" id="cell_output_29">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_29">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_46" class="cell_visible">
+    <div id="cell_46" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Deals with the presence of zero edges in the graph by removing vertices whose only edges are zero (including isolated vertices). When removing vertices, try to leave more than one component while removing all zero edges.
+
+def remove_zeros(G):
+    Lz = [v for v in G.vertices() if all([e[2] == 0 for e in G.edges_incident(v)])];
+    A = [v for v in G.vertices() if not v in Lz]
+    H = G.subgraph(A);
+    if H.is_connected():
+        Alist = [[v for v in G.vertices() if not v in Lz] + [w] for w in Lz]
+        Blist = [l for l in Alist if not G.subgraph(l).is_connected()]
+        if len(Blist) &gt; 0:
+            C = [v for v in G.vertices() if not v in Blist[0]];
+            G.delete_vertices(C);
+    else:
+        G.delete_vertices(Lz)
+        
+def put_zeros_back(G,R,C):
+    #Returns the zeros removed at an earlier step. G is the current graph. R, C is 
+    #original set of row and column vertices.
+    Rz = [v for v in R if not v in G.vertices()];
+    Cz = [v for v in C if not v in G.vertices()];
+    for v in Rz:
+        G.add_vertex(v);
+        G.add_edges([(v,c,0) for c in C if c in G.vertices()]);
+    for v in Cz:
+        G.add_vertex(v);
+        G.add_edges([(r,v,0) for r in R if r in G.vertices()]);&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_46" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_46">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_46">
+                            <div class="cell_output_print_wrap" id="cell_output_46">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_46">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_47" class="cell_visible">
+    <div id="cell_47" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Turns a complete bipartite graph into its corresponding matrix.
+
+def graph_to_matrix(G,R,C):
+    M = matrix([[G.edge_label(R[i],C[j]) for j in range(len(C))] for i in range(len(R))]);
+    return M&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_47" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_47">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_47">
+                            <div class="cell_output_print_wrap" id="cell_output_47">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_47">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_50" class="cell_visible">
+    <div id="cell_50" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#When G is connected, we must check: (1) all cycles consistent, and (2) that the unique rank-1 completion sums to 1. We return the unique completion, and whether it is a probability matrix.
+
+def one_component_test(G,R,C):
+    if not cycle_check(G):
+        return "The matrix is not completable (cycles)";
+    else:
+        G2 = r1_closure(G);
+        put_zeros_back(G2,R,C);
+        M = graph_to_matrix(G2,R,C);
+        if sum(G2.edge_labels()) == 1:
+            print "The matrix is completable to: \n", M
+        else:
+            print "The matrix is not completable to a probability matrix. \n The rank-1 completion is: \n", M&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_50" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_50">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_50">
+                            <div class="cell_output_print_wrap" id="cell_output_50">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_50">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_51" class="cell_visible">
+    <div id="cell_51" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#When G has two components, we must check: (1) all cycles consistent, (2) the sum of square roots of each component is at most 1. We return the two probability completions.
+
+def two_component_test(G,R,C):
+    if not cycle_check(G):
+        print "The matrix is not completable (cycles)";
+    else:
+        G2 = r1_closure(G);
+        Rh = [v for v in R if v in G];
+        Ch = [v for v in C if v in G];
+        L = G2.connected_components()
+        if sum([sqrt(sum([e for e in H.edge_labels()])) for H in G.connected_components_subgraphs()]) &gt; 1:
+            print "The matrix is not completable (half-norm)."
+        else:
+            r = [v for v in Rh if v in L[0]][0];
+            c = [v for v in Ch if v in L[1]][0];
+            var('x');
+            G2.add_edge((r,c,x));
+            G3 = r1_closure(G2);
+            sols = solve(sum(G3.edge_labels()) == 1,x);
+            put_zeros_back(G3,R,C);
+            N = graph_to_matrix(G3,R,C);
+            if len(sols) == 2:
+                print "The matrix is completable to: \n", N.substitute(x = sols[0].rhs()), "\n and:\n", N.substitute(x=sols[1].rhs())
+            else:
+                print "The matrix is completable to: \n", N.substitute(x = sols[0].rhs())&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_51" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_51">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_51">
+                            <div class="cell_output_print_wrap" id="cell_output_51">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_51">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_49" class="cell_visible">
+    <div id="cell_49" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#When G has more components, we must check: (1) all cycles consistent, (2) the sum of square roots of each component is at most 1. We do not compute a completion, since there are infinitely many. To optimize a particular function, see the Maple code available at math.berkeley.edu/∼zhrosen/probCompletion.html 
+
+def more_components_test(G,R,C):
+    if not cycle_check(G):
+        print "The matrix is not completable (cycles)";
+    else:
+        G2 = r1_closure(G);
+        Rh = [v for v in R if v in G];
+        Ch = [v for v in C if v in G];
+        L = G2.connected_components()
+        if sum([sqrt(sum([e for e in H.edge_labels()])) for H in G.connected_components_subgraphs()]) &gt; 1:
+            print "The matrix is not completable (half-norm)."
+        else:
+            print "The matrix has infinitely many completions."&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_49" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_49">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_49">
+                            <div class="cell_output_print_wrap" id="cell_output_49">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_49">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_41" class="cell_visible">
+    <div id="cell_41" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#This code will check for completability. It will return a completion in the 1 and 2 component cases.
+
+remove_zeros(G);
+if 0 in G.edge_labels():
+    print "The matrix is not completable (zeros)";
+num_cc = len(G.connected_components());
+if num_cc == 1:
+    one_component_test(G,R,C);
+else: 
+    if num_cc == 2:
+        two_component_test(G,R,C);
+    else:
+        more_components_test(G,R,C);&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_41" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_41">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_41">
+                            <div class="cell_output_print_wrap" id="cell_output_41">
+                                
+                                    <pre class="shrunk">The matrix is completable to: 
+[                             0.000000000000000                     
+0.0100000000000000                             0.0200000000000000   
+-0.0300000000000000/(2*sqrt(2) - 3)]
+[                                             0                     
+0.0200000000000000                             0.0400000000000000   
+-0.0600000000000000/(2*sqrt(2) - 3)]
+[                                             0                     
+-3/50*sqrt(2) + 9/100 -0.120000000000000*sqrt(2) + 0.180000000000000
+0.0900000000000000] 
+ and:
+[                            0.000000000000000                      
+0.0100000000000000                            0.0200000000000000    
+0.0300000000000000/(2*sqrt(2) + 3)]
+[                                            0                      
+0.0200000000000000                            0.0400000000000000    
+0.0600000000000000/(2*sqrt(2) + 3)]
+[                                            0                      
+3/50*sqrt(2) + 9/100 0.120000000000000*sqrt(2) + 0.180000000000000  
+0.0900000000000000]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_41">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+</div>
+<!--    <script>
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>-->
+
+    
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, sans-serif;"></div></body></html>
