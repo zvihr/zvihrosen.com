@@ -1,0 +1,195 @@
+\documentclass[12pt]{beamer}
+\usetheme{Penn} 
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{verbatim}
+%\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{animate}
+\usetikzlibrary{matrix, shapes, arrows, calc, backgrounds}
+\usepackage[vcentermath, enableskew]{youngtab}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{alg}[thm]{Algorithm}
+\newtheorem{question}[thm]{Question}
+\begin{document}
+
+\author[Z. Rosen]{Zvi Rosen \\ Department of Mathematics}
+
+\date[\today]{\today}
+\title[Matrix Inverses]{{\Large Matrix Inverses}}
+\institute[Dept. of Mathematics~~--~~University of Pennsylvania]{}
+
+
+\frame{\titlepage}
+
+
+\begin{frame}
+\frametitle{Matrix Inverse - Definition}
+
+\begin{defn}
+Let $A$ be an $n \times n$ matrix. The inverse of $A$,
+denoted $A^{-1}$ is the matrix which satisfies
+\[ A \cdot A^{-1} = A^{-1} \cdot A = I_n.\]
+\end{defn}
+
+Note that in general $AB \neq BA$ for matrices, but for the
+inverse matrix $A A^{-1} = A^{-1} A$.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Matrix Inverse - Example}
+Define the matrix
+
+\[M = 
+\left(\begin{array}{ccc}
+1 & 0 & 3 \\
+6 & -2 & 8 \\
+-1 & 1 & 4 \\
+\end{array}\right)\]
+
+
+Using the MATLAB command {\tt inv(M)}, we obtain:
+
+\[M^{-1} = 
+\left(\begin{array}{ccc}
+4 & -0.75 & -1.5 \\
+8 & -1.75 & -2.5 \\
+-1 & 0.25 & 0.5 \\
+\end{array}\right)\]
+\end{frame}
+
+\begin{frame}
+\frametitle{Algorithm for Computing Inverses}
+Note that the inverse matrix takes input $(1,0,0)^T$ and
+gives output the solution to $A x_1 = (1,0,0)^T$, similarly,
+\[ (0,1,0)^T \to \text{  solution of  } Ax_2 = (0,1,0)^T \]
+\[ (0,0,1)^T \to \text{  solution of  } Ax_3 = (0,0,1)^T \]
+This will be enough to determine our inverse matrix 
+\[A^{-1} = \left[ \begin{array}{c|c|c} x_1 & x_2 & x_3 \end{array} \right]. \]
+\end{frame}
+
+\begin{frame}
+\frametitle{Vector Norms}
+A {\em vector norm} is a mapping from the set of vectors
+to the set of nonnegative real numbers. It has the following
+properties: 1. $||a {\bf v}|| = |a|\cdot ||{\bf v}||$ for real scalars $a$, \\
+2. $||{\bf v} + {\bf w}|| \leq 
+||{\bf v}|| + ||{\bf w}||$ (triangle inequality), and \\
+3. $||{\bf v}||=0$ if and only
+if ${\bf v}$ is the zero vector. \\[5mm]
+
+$||v||_e$: The Euclidean norm. \\
+$||v||_p$: The $p$-norm, for $p \geq 1$. \\
+$||v||_1$: The $1$-norm. \\
+$||v||_\infty$: The infinity-norm.\\
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Matrix Norms}
+A {\em matrix norm} is a mapping from the set of matrices
+to the set of nonnegative real numbers, with all the same
+properties as the vector norm.\\[5mm]
+
+A matrix norm is induced by a vector norm if you define it as 
+$||A|| = \max_{x\in \RR^n} ||Ax||/||x||$, using the 
+vector norm on the right-hand side. In each of the following,
+
+
+$||M||_f$: The Frobenius norm. (not induced) \\
+$||M||_1$: The column-sum norm. (induced by vector 1-norm) \\
+$||M||_\infty$: The row-sum norm. (induced by vector $\infty$-norm) \\
+$||M||_2$: The spectral norm. (induced by vector Euclidean norm)\\
+\end{frame}
+
+\begin{frame}
+\frametitle{The Spectral Norm}
+
+The spectral norm is the square root of the
+largest eigenvalue of $A^TA$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Condition Number}
+
+\begin{defn}
+The {\bf condition number} of a function is a
+measurement of how much the output changes relative
+to small changes in the input.
+
+
+\end{defn}
+
+\begin{defn}
+The {\bf matrix condition number} of $A$  is the condition number
+of the function which takes $b$ as input and then solves for
+$Ax = b$.
+
+Precisely, if $Ax = b$ and $A(x+ \Delta x) = b + \Delta b$, it is equal to
+\[
+\max_{b, \Delta b} \dfrac{|| \Delta x ||/|| x|| }{|| \Delta b||/ ||b||}.
+\]
+\end{defn}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Matrix Condition Number}
+Let's begin from this relationship:
+\[A(x+ \Delta x) = b + \Delta b  \iff A (\Delta x) = \Delta b \iff  \Delta x = A^{-1} \Delta b.\]
+
+This means that:
+\[
+\dfrac{|| \Delta x ||/|| x|| }{|| \Delta b||/ ||b||} = 
+\dfrac{|| A^{-1} \Delta b||/|| A^{-1} b|| }
+{|| \Delta b||/ ||b||} = \dfrac{|| A^{-1} \Delta b||}{|| \Delta b||} \cdot
+\dfrac{ ||b||}{|| A^{-1} b|| }.
+\]
+Substitute $b = Ac$ for some vector $c$.
+\[
+= \dfrac{|| A^{-1} \Delta b||}{|| \Delta b||} \cdot
+\dfrac{ ||Ac||}{|| c|| }.\]
+Maximizing over $\Delta b$ and $c$ gives the product
+$||A^{-1}|| \cdot ||A||$, using the operator norm.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Condition number - Example}
+
+
+\[M = 
+\left(\begin{array}{ccc}
+1 & 0 & 3 \\
+6 & -2 & 8 \\
+-1 & 1 & 4 \\
+\end{array}\right),
+M^{-1} = 
+\left(\begin{array}{ccc}
+4 & -0.75 & -1.5 \\
+8 & -1.75 & -2.5 \\
+-1 & 0.25 & 0.5 \\
+\end{array}\right)\]
+
+ norm(M) $\cdot$ norm($M^{-1}$), computed in MATLAB,
+gives 105.6137. The matrix is not well-conditioned.
+\end{frame}
+\end{document}

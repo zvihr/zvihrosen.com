@@ -1,0 +1,62 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\pagestyle{empty}
+
+\usepackage[top=.6in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+{\bf Math 320 -- Computer Methods in the Mathematical Sciences I.}\\
+\section*{Term Paper}
+
+\subsection*{Timeline} \hspace{1cm} \\[3mm]
+\begin{tabular}{p{3in}l}
+Proposal Deadline:&  Friday, October 28. \\
+
+First Draft Deadline:& Friday, November 25. \\
+
+Presentations will take place in class on &  December 7, 9, and 12. \\
+
+Final Draft Deadline:& Thursday, December 15 \\
+\end{tabular}
+
+\subsection*{Groups}
+The term paper may be written as individuals or in teams
+of two. Please describe the contributions of each team member
+to the project in your submission.
+
+\subsection*{Sample Topics}
+
+\begin{enumerate}
+
+\item Exposition on a computational tool in mathematics not
+discussed in class. For example:
+\begin{enumerate}
+\item What is a Gr\"{o}bner basis?
+\item What is a tensor? How can we do linear algebra in higher dimensions?
+\item Principal components analysis (PCA).
+\item Discrete Fourier Transform and Image Analysis.
+\item The simplex method.
+\end{enumerate}
+
+\item Take an applied problem in your area of interest.
+Use the theory we developed in class to analyze the problem.
+
+\item Pick a software package in your field of interest. Perform
+experiments with it. Analyze its primary functionalities from 
+a mathematical perspective. Discuss ways to improve or expand it.
+
+
+\end{enumerate}
+\end{document}

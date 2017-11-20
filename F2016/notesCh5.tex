@@ -1,0 +1,172 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+
+\DeclareMathOperator{\sign}{sign}
+
+\newtheorem{bigthm}{Theorem}   % Numbered separately, as A, B, etc.
+\newtheorem{thm}{Theorem}[section]   % Numbered within each section
+\newtheorem{alg}[thm]{Algorithm}   % Numbered within each section
+
+\newtheorem{cor}[thm]{Corollary}     % Numbered along with thm
+\newtheorem{lem}[thm]{Lemma}         % Numbered along with them
+\newtheorem{prop}[thm]{Proposition}  % Numbered along with them
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{subfact}[thm]{Sub-Fact} 
+\theoremstyle{definition} 
+\newtheorem{defn}[thm]{Definition}   % Numbered along with thm
+\newtheorem{conj}[thm]{Conjecture}        % Numbered along with thm
+\newtheorem{remark}{Remark}   
+\newtheorem{ex}[thm]{Example}        % Numbered along with thm
+\newtheorem{exercise}[thm]{Exercise}        % Numbered along with thm
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{question}[thm]{Question}
+\newtheorem{prob}[thm]{Problem}
+\newtheorem{ass}[thm]{Assumption}
+\renewcommand{\thenotation}{}  % to make the notation
+                               % environment unnumbered
+\newtheorem{terminology}{Terminology}
+\renewcommand{\theterminology}{}  % to make the terminology
+\newcommand{\Spec}{\mbox{Spec }}
+\newcommand{\Proj}{\mbox{Proj }}
+\newcommand{\Sym}{\mbox{Sym}}
+\newcommand{\Hom}{\mbox{Hom}}
+\newcommand{\Aut}{\mbox{Aut}}
+
+\newcommand{\mc}{\ensuremath{\mathcal}}
+\renewcommand{\skip}{\hspace{1cm}}
+
+\newcommand{\EE}{\ensuremath{\mathbb{E}}}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+
+\newcommand{\A}{\ensuremath{\mathbb{A}}}
+\newcommand{\p}{\ensuremath{\mathfrak{p}}}
+\newcommand{\m}{\ensuremath{\mathfrak{m}}}%\usepackage[breaklinks]{hyperref}
+\usepackage{amssymb}
+%\usepackage{fixltx2e}
+%\usepackage[version=3]{mhchem}
+\usepackage{fullpage}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{soul}
+
+\begin{document}
+
+\title{Math 320: Class notes}
+\maketitle
+
+
+\subsection{Roots - Chapter 5}
+
+Let's solve the equation $f(x) = 0$.
+
+\section{Bracketing Methods}
+
+\begin{defn}
+Bracketing methods are any root-finding algorithms that
+start with an interval containing a root.
+\end{defn}
+
+\begin{alg}[Incremental search] INPUT: function $f$, search interval $[l,r]$.
+\begin{enumerate}
+\item Divide the interval into $N$ sub-intervals, with points
+$l = x_0 < \ldots < x_N = r$ evenly spaced in the interval.
+\item Compute $f(x_i)$ for all $i$.
+\item List all $i$ for which $\sign(f(x_i)) \neq \sign(f(x_{i+1})).$
+\end{enumerate}
+OUTPUT: List of brackets $\{(x_i,x_{i+1})\}$ flagged in step 3.
+
+\end{alg}
+
+
+\begin{question}[Accuracy]
+Does this algorithm catch all the roots? 
+What roots will this algorithm miss? Will we ever
+catch extra roots?
+\end{question}
+It misses roots when $N$ is not large enough.\\
+It does not catch roots whose neighborhood all has
+one sign.\\
+If a bracket is flagged, there will be a root in it. Why?
+
+\begin{thm}[Intermediate Value Theorem] If $f$ is a continuous
+function on $[a,b] \subset \RR$, 
+$f(a) < 0$, and $f(b) > 0$; then there exists
+a point $c \in [a,b]$ such that $f(c) = 0$.
+\end{thm}
+
+\begin{question}[Complexity]
+How long does the algorithm take?
+\end{question}
+It evaluates the function $N+1$ times, and checks the sign on
+each value. The complexity is $O(N)$.
+
+\begin{question}[Error]
+How close to the true roots will the roots
+found by our algorithm be?
+\end{question}
+Take the approximation of a given root to be in the
+middle of the flagged bracket. 
+Our error is then bounded by $(l-r)/2N$.
+
+
+---------
+
+\subsection{Bisection method}
+
+The bisection method is an iterative form of the
+incremental search.
+
+\begin{alg}[Bisection Method] INPUT: function $f$, 
+search interval $[l,r]$ such that $\sign(f(l)) \neq \sign(f(r))$,
+desired precision $\epsilon$.
+\begin{enumerate}
+\item If $l-r < 2\epsilon$, stop.
+\item Divide the interval into $2$ equal sub-intervals: $l < m < r$.
+\item Compute $f(m)$.
+\item If $\sign(f(m)) = \sign(f(l))$, repeat with interval $[m,r]$;
+else, repeat with interval $[l,m]$.
+\end{enumerate}
+OUTPUT: Final bracket endpoints.
+
+\end{alg}
+
+{\bf Accuracy:} Catches exactly one root.
+
+{\bf Complexity:} Will stop when $l-r < 2\epsilon$ since $l-r$ shrinks
+by half every time, the length of the interval at iteration $N$ is 
+$(1/2)^N (l-r)$.
+\[
+(1/2)^N (l-r) < 2 \epsilon \iff -N +  \log_2(l-r)-\log_2(2\epsilon) 
+\]
+
+{\bf Error:} By design the error is at most $\epsilon$.
+
+
+----
+
+\subsection{False-Position Method}
+
+The false-position method resembles the bisection method,
+but differs in how to select the midpoint. 
+For false-position, you take the value of 
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\pagestyle{empty}
+
+%\usepackage[top=.6in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+
+\setlength{\parindent}{0pt}
+%\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\setlist{noitemsep}
+%\setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+
+\begin{document}
+{\bf \large Math 320 -- Computer Methods in the Mathematical Sciences I.}\\
+
+\vspace{3mm}
+
+{\bf \large Project Title:} Neural Networks\\
+\vspace{2mm}
+
+{\bf \large Authors:} Ryan Kortvelesy\\
+
+\vspace{3mm}
+
+\section{Presentation}
+{\bf \large Comments:}
+\begin{itemize}
+\item Nice brain explanation -- would have been improved with images.
+\item Good exploration of Universal Approximation Theorem.
+\item Bias image -- good!
+\item ``So much chain rule'' :-)
+\item Great that you walked through the code and implementation. When the
+display was buggy because of the projector, you rolled nicely with the punches --good job!
+\end{itemize}
+
+{\bf \large Grade:}
+
+\begin{enumerate}
+\item {\bf Clarity.} 
+\item {\bf Engagement.} 
+\item {\bf Content.}
+\item {\em For group projects:} {\bf Teamwork.}
+\end{enumerate}
+
+\section{Paper}
+
+{\bf \large Comments:}
+\begin{itemize}
+\item
+\end{itemize}
+
+\begin{enumerate}
+\item {\bf Clarity.} 
+\item {\bf Level of difficulty.} 
+\item {\bf Accuracy.} 
+\item {\em For group projects:} {\bf Teamwork.}
+\end{enumerate}
+
+
+
+\end{document}

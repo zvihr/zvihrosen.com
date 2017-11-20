@@ -1,0 +1,119 @@
+\documentclass[12pt]{amsart}
+\usepackage[fullpage]{geometry}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Math 320: Homework 3}
+Due: September 30, 2016
+\maketitle
+
+Please read through chapters 5 and 6 in the textbook.
+Answer the following questions. Please submit all code
+and output with brief descriptions of what you are doing.
+
+\vspace{5mm}
+
+\begin{enumerate}
+
+\item Implement the False Position Method (regula falsi) in
+MATLAB. 
+\begin{enumerate}
+\item The method should be implemented as
+
+\centerline{{\tt falsi(l,r,func,epsilon,maxSteps)}}
+
+taking a bracket $[l,r]$, a function {\tt func}, an approximate 
+relative error bound $\epsilon$, and a positive integer {\tt maxSteps}. 
+The algorithm should terminate when
+the approximate relative error goes below $\epsilon$ or when the number
+of iterations exceeds {\tt maxSteps}.
+The output should be the midpoint value most recently computed.
+
+\vspace{3mm}
+
+\item Use your implementation to compute:
+
+\centerline{{\tt falsi(0, 3, @(x) x\textasciicircum 4 - 17, 10\textasciicircum (-5), 200)}}
+
+
+\item Modify your {\tt falsi} code to output the sequence of
+true relative errors and approximate relative errors at each iteration.
+Plot both of these sequences for the function as above.
+
+Let the $y$-axis be on a log scale.
+\end{enumerate}
+\vspace{2cm}
+
+\item Implement the Secant method in MATLAB.
+\begin{enumerate}
+\item The method should be implemented as
+
+\centerline{{\tt secant(x0,x1,func,epsilon,maxSteps)}}
+
+taking two initial guesses $x_0$ and $x_1$, 
+a function {\tt func}, an approximate 
+relative error bound $\epsilon$, and a positive integer {\tt maxSteps}. 
+The algorithm should terminate when
+the approximate relative error goes below $\epsilon$ or when the number
+of iterations exceeds {\tt maxSteps}.
+The output should be the final approximation.
+
+\vspace{3mm}
+
+\item Evaluate the function for
+
+\centerline{ {\tt secant(4,5,@(x) x\textasciicircum 3 - exp(x),10\textasciicircum (-6),100)}}
+
+\vspace{3mm}
+
+\item Evaluate the function for 
+
+\centerline{{\tt secant(0,1,@(x) x\textasciicircum 3 - exp(x),10\textasciicircum(-6),100)}}
+
+\vspace{3mm}
+
+\item Incorporate a graphical component to your code, so that
+the function {\tt secant} plots the graph of {\tt func}, as well
+as the secant line segment computed at each iteration. Repeat the
+computations above and display the associated graphs.
+
+\end{enumerate}
+
+\vfill
+\pagebreak
+
+\item Prove that, given  Newton's method converges quadratically to a
+simple root of a smooth function.
+{\bf Hint:} Estimate the error using Taylor's theorem with remainder
+term.
+
+\vspace{1cm}
+
+\item You suspect that a bracket $[l,r] \subset \mathbb{R}$ contains a
+multiple root of a smooth function $f(x)$ which is everywhere nonnegative. 
+For each of the following
+methods describe if it will work and provide reasons.
+\begin{itemize}
+\item Bisection Method for $f(x)$.
+\item Incremental Search Method for $f'(x)$.
+\item Newton's Method.
+\item Secant Method.
+\end{itemize}
+
+\end{enumerate}
+
+
+\end{document}

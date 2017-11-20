@@ -1,0 +1,64 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\flushright
+Name:\underline{\hspace{5cm}}
+\title{Math 320: Quiz 2}
+\maketitle
+
+\begin{enumerate}
+\item (4 points) Suppose our computer works in a decimal system that
+stores only three significant digits in its significand, and
+ten digits in its exponent. In particular, each number looks like:
+\[A.BC \times 10^{e}.
+\]
+\begin{enumerate}
+\item What is the result of $(5.26 \times 10^3) \times (2.10 \times 10^5)$?
+What is the (absolute) roundoff error?
+
+\item What is the result of $(1/3) + (1/3) + (1/3)$? 
+Assume the computer first evaluates and rounds each fraction, 
+then performs the operations in the standard
+order.
+\end{enumerate}
+
+\vfill
+\pagebreak
+
+\item (6 points) We want to approximate $10.1^{10}$ using the
+Taylor series for $x^{10}$ around the point $a = 10$.
+\begin{enumerate}
+\item List the first 3 terms of the Taylor series for 
+$f(x) = x^{10}$ at $a = 10$.
+
+\item Evaluate the $n$-th order approximation to $10.1^{10}$ for
+$n = 0,1$, and $2$.
+
+
+\item Compute the approximate relative error in the 
+first-order approximation.
+
+
+\item To one significant digit, what is the approximate relative error
+in the second-order approximation?
+
+
+
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}

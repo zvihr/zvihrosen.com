@@ -1,111 +1,239 @@
 <!DOCTYPE html>
+
+
 <html>
 
   <head>
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-        <title> Zvi Rosen | Research</title>
+        <title>Zvi H. Rosen | Research</title>
 
   </head>
-
   <body>
-    <div class="nav">
-      <div class="container">
-	<ul class = "nav nav-pills pull-left">
-          <li><a href="index.html">Home</a></li>
-	</ul>
-        <ul class = "nav nav-pills pull-right">
-          <li><a href="about.html">About</a></li>
-          <li class="active"><a href="#">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="conf.html">Conferences</a></li>
-	  <li><a href="notes.html">Notes</a></li>
-	  <li><a href="misc.html">Misc</a></li>
-        </ul>
+    <div class="container" id="central">
+      <div class="row align-items-end">
+	<div class="col-8">
+	  <img src="chalk3.jpg"/>
+	</div>
+	<div class="col">
+	    <ul class="list-unstyled menu">
+	      <li> <a href="index.html">Home</a></li>
+	      <li> <a href="bio.html">About Me</a></li>
+	      <li> <a href="rosenCV.pdf">CV</a></li>
+	      <li> <a href="research.html">Research</a> </li>
+	      <li> <a href="teaching.html">Teaching</a> </li>
+	      <li> <a href="notes-code.html">Notes & Code</a> </li>
+	      <li> <a href="misc.html">Misc</a> </li>
+	    </ul>
+	</div>
+	<div class="w-100"></div>
+	<div class="col-8 right">
+	  <h1>Research</h1>
+	</div>
       </div>
     </div>
+    
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Research</h1>
+    <div class="container-fluid">
+      <h3>Research Interests</h3>
+      <p id="research-top">
+	My research focuses on the intersection of mathematical biology and
+	applied algebra. In particular, I think about how tools from algebraic
+	geometry, commutative algebra, and combinatorics can be applied to biological
+	questions. I also work on either side of this intersection: I study problems
+	related to algebraic matroids and coordinate projections in other realms, and 
+	I have computational biology projects in translation dynamics and gene regulatory networks.
+      </p>
+
+      <ul class="list-unstyled"> 
+	<li><i>Algebra keywords</i>: algebraic matroids, structured polynomial systems, convex set arrangements. </li>
+	<li><i>Biology keywords</i>: population genetics, single-cell transcriptomics, neural codes.</li>
+      </ul>
+
+      <p>
+	See my <a href="https://scholar.google.com/citations?user=qgCXy4QAAAAJ&hl=en">profile</a> 
+	at Google Scholar, or check the 
+	<a href="https://arxiv.org/find/math/1/au:+Rosen_Z/0/1/0/all/0/1">arXiv</a> 
+	for my recent work. For a detailed description of current and future projects,
+	please read my <a href="research2017.pdf">research statement</a>.
+      </p>
+      <h3>Published Articles</h3>
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="states.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Algebraic tools for the analysis of state space models</h4> </li>
+ 	    <li class="right">Nicolette Meshkat, Zvi Rosen, and Seth Sullivant </li>
+	    <li> We present algebraic techniques to analyze state space models in the areas of structural identifiability, observability, and indistinguishability. (To appear in Proceedings of Mathematical Society of Japan) </li>
+	    <li> </li>
+	    <li> (<a href="https://arxiv.org/abs/1609.07985">arXiv</a> | journal) </li>
+	  </ul>
+	</div>
+      </div>
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="codes.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>What makes a neural code convex?</h4> </li>
+	    <li class="small right"> Carina Curto, Elizabeth Gross, Jack Jeffries, 
+	      Katherine Morrison, Mohamed Omar,<br/> Zvi Rosen, Anne Shiu, and Nora Youngs </li>
+	    <li> Combinatorial codes are convex if codewords correspond to regions defined by an arrangement of convex open sets in Euclidean space. We provide a complete characterization of local obstructions to convexity. </li>
+	    <li>SIAM Journal on Applied Algebra and Geometry, 1(1), 222-238, 2017. </li>
+	    <li> (<a href="https://arxiv.org/abs/1508.00150">arXiv</a> | <a href="http://epubs.siam.org/doi/abs/10.1137/16M1073170">journal</a>) </li>
+	  </ul>
 	</div>
       </div>
 
-      <div class="content">
-	<div class="container">
-	  <div class="row">
-	    <div class="col-md-4">
-	      <h3>Areas of interest </h3>
-	      <p> Algebraic combinatorics, Commutative algebra, Algebraic
-	      Geometry, Algebraic statistics, and Mathematical biology. </p>
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="r1tensor.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>The geometry of rank-one tensor completion</h4> </li>
+	    <li class="right"> Thomas Kahle, Kaie Kubjas, Mario Kummer, Zvi Rosen </li>
+	    <li> The semialgebraic and algebraic geometry of projections of rank-one tensors to some of their coordinates is studied, giving insight into the problem of rank-one completion of partial tensors.</li>
+	    <li>SIAM Journal on Applied Algebra and Geometry, 1(1), 200-221, 2017 </li>
+	    <li> (<a href="https://arxiv.org/abs/1605.01678">arXiv</a> | <a href="http://epubs.siam.org/doi/abs/10.1137/16M1074102">journal</a>) </li>
+	  </ul>
+	</div>
+      </div>
 
-	      <h3>Research Keywords </h3>
-	      <p>Algebraic matroids, Coordinate projections,
-	      Determinantal ideals, Chemical reaction networks,
-	      Discrete geometry
-			</p>
-	      <h3><a href="ResearchStatement.pdf"> Research Statement</a></h3>
-	      </div>
 
-	    <div class="col-md-7">
-      <h3>Written Research </h3>
-      <h4>Accepted:</h4>
-      <ol>
-	<li> Curto, C., Gross, E., Jeffries, J., Morrison, K., Omar, M., Rosen, Z., Shiu, A., & Youngs, N.  <a href="https://arxiv.org/abs/1508.00150"> What makes a neural code convex? </a>. SIAM Journal on Applied Algebra and Geometry, 1(1), 222–238, 2017.
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="matrix.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Matrix Completion for the Independence Model</h4> </li>
+	    <li class="right">Kaie Kubjas, Zvi Rosen</li>
+	    <li> We investigate the problem of completing partial matrices to 
+	      rank-one matrices in the standard simplex. For each pattern of specified 
+	      entries, we give equations and inequalities which are satisfied if and 
+	      only if an eligible completion exists.</li>
+	    <li>Journal of Algebraic Statistics, 8(1), 1-21, 2017.</li>
+	    <li> (<a href="https://arxiv.org/abs/1407.3254">arXiv</a> | <a href="https://jalgstat.library.iit.edu/jalgstat/article/view/50">journal</a>) </li>
+	  </ul>
+	</div>
+      </div>
+
+
+
+
+
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="asb.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Algebraic systems biology: a case study for the Wnt pathway.</h4> </li>
+	    <li class="right">Elizabeth Gross, Heather A. Harrington, Zvi Rosen, Bernd Sturmfels</li>
+	    <li> Current methods from computational algebraic geometry and combinatorics 
+	      are applied to analyze the Shuttle model for the Wnt signaling pathway.</li>
+	    <li> Bulletin of Mathematical Biology,
+	      78, 21-51, 2016.</li>
+	    <li> (<a href="https://arxiv.org/abs/1502.03188">arXiv</a> | <a href="https://link.springer.com/article/10.1007/s11538-015-0125-1">journal</a>) </li>
+	  </ul>
+	</div>
+      </div>
+
+
+
+
+
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="WntPathway.jpg" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Parameter-free methods distinguish Wnt pathway models 
+		and guide design of experiments</h4> </li>
+	    <li class="right">Adam L. MacLean, Zvi Rosen, Helen M. Byrne, Heather A. Harrington</li>
+	    <li> We analyze models of the Wnt signaling pathway, which is involved in adult stem cell tissue maintenance and cancer. Bayesian parameter inference fails to reject models; non-parametric tools including algebraic matroids are employed.
 </li>
-<li> Kahle, T., Kubjas, K., Kummer, M., & Rosen Z. <a href="https://arxiv.org/abs/1605.01678"> The geometry of rank-one tensor completion</a>.
-SIAM Journal on Applied Algebra and Geometry, 1(1), 200-221, 2017. </li>
-<li> Kubjas, K. & Rosen, Z.  <a href="http://arxiv.org/abs/1407.3254">Matrix Completion for the Independence Model</a>. Journal of Algebraic
-Statistics, 8(1), 1-21, 2017. </li>
-	<li>   Gross, E., Harrington, H.A., Rosen, Z., & Sturmfels, B.
-	  <a href="http://arxiv.org/abs/1502.03188">
-	    Algebraic Systems Biology: A Case
-	    Study for the Wnt Pathway</a>.
-	  Bulletin of Mathematical Biology, 78, 21-51, 2016.
-	  
-	<li>MacLean, A. L.,  Rosen, Z., Byrne, H. M., & Harrington, H. A.
-	  <a href="http://www.pnas.org/content/112/9/2652.abstract">
-	    Parameter-free methods distinguish Wnt pathway models and guide design
-	    of experiments</a>.
-	  Proceedings of the National Academy of Sciences, 112(9),
-	  2652-2657, 2015.
-	  
-	  Relevant code is <a href="wntCode.html">here</a>.</li>
-	</li>
-	<li>  Burnham, G., Rosen, Z., Sidman, J., & Vermeire, P.
-	  <a href="http://arxiv.org/abs/1201.5010">Line arrangements modeling
-	    curves of high degree: Equations, syzygies, and secants</a>.
-	  <i>Recent Advances in Algebraic Geometry:
-	    A Volume in Honor of Rob Lazarsfeld's 60th Birthday</i>, 417, 52, 2015.
-	</li>
-				
-      </ol>
-      <h4>Submitted:</h4>
-      <ol>
-	<li><a href="https://arxiv.org/abs/1702.06907"> Convex Neural Codes in Dimension 1</a>, joint with Yan X. Zhang. </li>
-
-	<li><a href="https://arxiv.org/abs/1605.01678">
-	   Algebraic Tools for the Analysis of State Space Models</a>, joint with Nicolette Meshkat and Seth Sullivant.
-</li>
-
-        <li><a href="http://arxiv.org/abs/1312.3777">
-	    Algebraic Matroids with Graph Symmetry</a>, joint with Franz Kir&aacute;ly and Louis Theran.</li>
-	<li><a href="http://arxiv.org/abs/1403.8148">
-	    Computing Algebraic Matroids</a>, with
-	  relevant code <a href="matroids.html">
-	    here</a>.</li>
+	    <li>Proceedings of the National Academy of Sciences, 112(9), 2652-2657, 2015.</li>
+	    <li> (<a href="https://arxiv.org/abs/1409.0269">arXiv</a> | <a href="http://www.pnas.org/content/112/9/2652.abstract">journal</a>) </li>
+	  </ul>
+	</div>
+      </div>
 
 
-			      </ol>
+
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="sticks.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Line arrangements modeling curves of high degree: equations, syzygies and secants</h4> </li>
+	    <li class="right">Gregory Burnham, Zvi Rosen, Jessica Sidman, Peter Vermeire</li>
+	    <li> We study curves consisting of unions of projective lines 
+	      whose intersections are given by graphs. We discuss property Np for their
+	      embeddings, and the subspace arrangements associated to their secant varieties.</li>
+	    <li>LMS Lecture Notes Series 417: Recent Advances in Algebraic Geometry
+A Volume in Honor of Rob Lazarsfeld’s 60th Birthday.</li>
+	    <li> (<a href="https://arxiv.org/abs/1201.5010">arXiv</a> | <a href="http://www.cambridge.org/gb/academic/subjects/mathematics/geometry-and-topology/recent-advances-algebraic-geometry-volume-honor-rob-lazarsfelds-60th-birthday">book</a>) </li>
+	  </ul>
+	</div>
+      </div>
+
+
+
+      <h3>Submitted Articles</h3>
+
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="code1d.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Convex Neural Codes in Dimension 1</h4> </li>
+	    <li class="right">Zvi Rosen, Yan X. Zhang</li>
+	    <li> We study convex neural codes in dimension 1 (i.e. on a line or a circle). We use the theory of consecutive-ones matrices to obtain some structural and algorithmic results; we use generating functions to obtain enumerative results.</li>
+	    <li> (<a href="https://arxiv.org/abs/1201.5010">arXiv</a>) </li>
+	  </ul>
+	</div>
+      </div>
+
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="computing.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Computing Algebraic Matroids</h4> </li>
+	    <li class="right">Zvi Rosen</li>
+	    <li> We present algorithms for computing algebraic matroids using numerical algebra and 
+	      symbolic computation. We use these to compute various examples.</li>
+	    <li> (<a href="https://arxiv.org/abs/1403.8148">arXiv</a>) </li>
+	  </ul>
+	</div>
+      </div>
+
+      <div class="row align-items-center spacy">
+	<div class="col-3">
+	  <img src="graphsymmetry.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-9">
+	  <ul class="list-unstyled">
+	    <li> <h4>Algebraic Matroids with Graph Symmetry</h4> </li>
+	    <li class="right">Franz J. Kir&aacutely, Zvi Rosen, Louis Theran</li>
+	    <li> We study algebraic matroids whose ground sets are endowed with graph symmetry. These results are motivated by 
+	      framework rigidity, low-rank matrix completion and determinantal varieties. We define and compute the circuit polynomials associated to the circuits of these matroids.</li>
+	    <li> (<a href="https://arxiv.org/abs/1312.3777">arXiv</a>) </li>
+	  </ul>
+	</div>
+      </div>
+
+
     </div>
-   
-</div>
- </div>
-
-
- <div class="foot">
-  </div>
-
- </html>
+    
+</body>
+</html>

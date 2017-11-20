@@ -1,0 +1,112 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\pagestyle{empty}
+
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+{\bf Math 320 -- Computer Methods in the Mathematical Sciences I.} Fall 2016.\\[3mm]
+Instructor: Zvi Rosen. \\
+Office: DRLB 3N8D.\\
+Website: Canvas.\\ %\url{math.upenn.edu/\~ zvihr/math320-F16.html}\\
+Class Location: DRLB 3C2 \\
+Class Times: MWF 11am-12pm \\
+Office Hours: Wednesday 12pm-1pm or by appointment, DRLB 3N8D
+
+\subsection*{Prerequisites} MATH 240. If you have not taken MATH 240,
+but you would like to take the course,
+please speak to the instructor. Programming experience may be useful, but
+is not necessary to take the course.
+
+\subsection*{Attendance}
+Attendance is highly recommended but not mandatory. If you anticipate
+missing multiple days of class, please let the instructor know in
+advance.
+
+\subsection*{Grading}
+40 \% -- Homework \\
+30 \% -- Quizzes \\
+30 \% -- Final Project \\
+If you would like to submit an assignment for regrading, you must
+do so within a week of getting the grade.
+
+\subsection*{Homework}
+Homework will be assigned every 1-2 weeks. Teamwork is
+encouraged, as long as you specify your colleagues in your writeup.
+Each team member should write up and submit their work separately.
+The lowest homework grade will be dropped. Homework will be
+collected at the end of class on the day it is due.
+
+\subsection*{Quizzes}
+Quizzes will be administered most weeks on Friday. They will
+cover the recent material studied in class.  Each quiz
+will last about 20 minutes, and the lowest two quiz grades will be dropped.
+
+\subsection*{Course Text}
+The course textbook is \emph{Applied Numerical Methods with MATLAB for 
+Engineers and Scientists, Third Edition} by Steven C. Chapra. 
+Some homework assignments
+will include problems from the textbook, so please get a copy!
+
+\subsection*{Final Project}
+The final project will entail a written proposal, a
+full-length written report, and a 20 minute presentation 
+at the end of the semester. The projects will
+be carried out in pairs or individually. 
+More details will come in a
+separate handout.
+
+\subsection*{Course Objectives}
+We will begin the semester by becoming familiar with MATLAB.
+Then we will delve into the following topics:
+\begin{enumerate}
+\item Roots and optimization.
+\item Linear algebra.
+\item Regression and fit.
+\item Interpolation.
+\item Differentiation and integration.
+\item Differential equations.
+\end{enumerate}
+
+In each topic, we will discuss the theory underlying
+computational methods, and then implement these techniques
+in MATLAB. Our focus will be on proving convergence and
+error bounds for our techniques.
+
+
+\subsection*{Student Disabilities Services}
+University of Pennsylvania, provides reasonable
+ accommodations to students with disabilities who have 
+self-identified and been approved by the office of
+ Student Disabilities Services (SDS).  
+Please make an appointment to meet with me 
+as soon as possible in order to discuss your accommodations and your needs.
+
+If you have not yet contacted SDS, and would 
+like to request accommodations or have questions, 
+you can make an appointment by calling SDS 215.573.9235.  
+The office is located in the Weingarten Learning Resources 
+Center at Stouffer Commons 3702 Spruce Street, Suite 300. 
+All services are confidential.
+
+\subsection*{Academic Integrity}
+You can consult the University's Code of Academic Integrity here:
+{\small \url{http://provost.upenn.edu/policies/pennbook/2013/02/13/code-of-academic-integrity}}.\\
+These standards will be upheld in this class. If you use fragments of code from
+someone else, please specify this in your comments.
+If you work with your classmates, please make a note of it.
+Any cases of academic dishonesty may 
+be referred to the Office of Student Conduct.
+
+\end{document}

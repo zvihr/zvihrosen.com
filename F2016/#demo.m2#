@@ -1,0 +1,65 @@
+---Based on a paper by B. Sturmfels
+---Program a polynomial ring that records number and value of coins.
+
+A = {{1, 1, 1, 1},{1, 5, 10, 25}};
+R = QQ[p,n,d,q, Degrees => transpose A];
+
+--What degree does a dime have? Quarter?
+degree p
+degree n
+degree d
+degree q
+
+--Let's count coins and value
+a = degree(p^4*n^8*d^5*q)
+h = basis(a, R)
+
+rank source(h) -- number of coin combinations
+
+h = basis({100,1000}, R)
+
+---What about different values?
+-- Chicken McNugget Problem
+
+restart
+
+A = {{6, 9, 20}};
+R = QQ[s,m,l, Degrees => transpose A];
+
+L = for i from 6 to 100 list rank source basis(i,R)
+for i from 6 to 100 list (if L#(i-6) == 0 then i)
+
+
+
+
+
+--We can study shapes defined by polynomial equations.
+--How many intersection points would you expect between
+--a circle and an ellipse?
+
+restart
+R = QQ[x,y];
+I = ideal(x^2 + y^2 - 1);
+J = ideal(x^2 - 3*y^2 - (1/4));
+K = I+J
+degree(K)
+gens gb K
+
+--What does the intersection of a cone and a plane look like?
+
+R = QQ[x,y,z];
+I = ideal(x^2 + y^2 - z);
+
+J = ideal(z - 3); --horizontal plane
+J = ideal(x + y - 2); --vertical plane
+J = ideal(x + y + z - 1); --skew plane
+
+K = I + J; gens gb K
+
+
+--How about the intersection of two cylinders?
+
+I = ideal(x^2 + y^2 - 1);
+J = ideal(y^2 + z^2 - 1);
+K = I + J; gens gb K
+primaryDecomposition K

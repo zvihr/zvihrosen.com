@@ -1,0 +1,54 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{lscape}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\flushright
+Name:\underline{\hspace{5cm}}
+\title{Math 320: Quiz 5}
+\maketitle
+
+\begin{enumerate}
+
+\item (6 points) Define the matrix
+\[A = \left[
+\begin{array}{ccc}
+2 & -1 & 3 \\
+4 & 1 & 0 \\
+-2 & 0 & 2 \\
+\end{array} \right].
+\] \begin{enumerate}
+\item Compute an LU Decomposition using ``Naive Gaussian elimination.''
+What are $L$ and $U$?
+\item Solve the equation $Ax = (1,2,1)^T$ for $x$ by first solving
+$Ld = b$ and then solving $Ux = d$ (using $L$ and $U$ from the last step). 
+What are $d$ and $x$?
+
+\vfill
+\pagebreak
+
+\item Compute the LU Decomposition using ``Gaussian elimination with partial
+pivoting.'' What are L, U, and P?
+\end{enumerate}
+
+\pagebreak
+\item (4 points) Write a MATLAB function that computes a Cholesky
+decomposition for a $3 \times 3$ matrix $A$ (assuming the input
+is symmetric and positive semi-definite). Precise wording is 
+not as important as conceptual accuracy. Don't use the {\tt chol}
+function!
+\end{enumerate}
+
+\end{document}

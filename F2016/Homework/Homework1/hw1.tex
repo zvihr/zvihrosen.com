@@ -1,0 +1,143 @@
+\documentclass[12pt]{amsart}
+\usepackage[fullpage]{geometry}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Math 320: Homework 1}
+Due: September 9, 2016
+\maketitle
+
+Please read through chapters 2 and 3 of the textbook.
+Obtain access to a copy of MATLAB or GNU Octave to answer the
+following questions. For all questions, please write a brief
+description of how your code works.
+
+\begin{enumerate}
+\item Problem 2.9: The density of freshwater can be computed
+as a function of temperature with the following cubic equation:
+\[\rho = 5.5289 \times 10^{-8} T_C^3 - 8.5016 \times 10^{-6} T_C^2  +6.5622 \times 10^{-5} T_C + 0.99987\]
+where $\rho =$ density (g/cm$^3$) and $T_C = $ temperature ($^\circ C$).
+Use MATLAB to generate a vector of temperatures ranging from $32^\circ F$ to
+$93.2 ^\circ F$ using increments of $3.6^\circ F$. Convert this vector to degrees Celsius
+and then compute a vector of densities based on the cubic formula. Create a plot of
+$\rho$ versus $T_C$. Recall that $T_C = 5/9 (T_F - 32)$.
+
+\vspace{1cm}
+\item Problem 2.15: The Maclaurin series expansion for the cosine is
+\[ \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!} - \cdots \]
+Use MATLAB to create a plot of the cosine (solid line) along with a 
+plot of the series expansion (black dashed line) up to and including the term
+$x^8/8!$. Use the built-in function {\tt factorial} in computing the series 
+expansion. Make the range of the abscissa from $x = 0 $ to $3 \pi /2$.
+
+\vspace{1cm}
+
+\item Problem 3.6: Two distances are required to specify the location of a point
+relative to an origin in two-dimensional space:
+\begin{itemize}
+\item The horizontal and vertical distances $(x,y)$ in Cartesian coordinates; or
+\item The radius and angle $(r,\theta)$ in polar coordinates.
+\end{itemize}
+It is relatively straightforward to compute Cartesian coordinates $(x,y)$ on the 
+basis of polar coordinates $(r,\theta)$. The reverse process is not so simple.
+The radius can be computed by the following formula: $r = \sqrt{x^2 + y^2}$.
+
+If the coordinates lie within the first and fourth quadrants (i.e., $x > 0$), then
+a simple formula can be used to compute $\theta$: $\theta = \tan^{-1}(y/x)$. The 
+difficulty arises for the other cases. The following table summarizes the possibilities:
+\[\begin{array}{l|l|l}
+x & y & \theta \\ \hline
+<0 & > 0 &  \tan^{-1}(y/x) + \pi \\
+<0 & < 0 &   \tan^{-1}(y/x) - \pi \\
+<0 & = 0 &  \pi \\
+=0 & > 0 & \pi/2 \\
+=0 & < 0 & -\pi/2 \\
+=0 & = 0 & 0
+\end{array}\]
+
+Write a well-structured M-file using {\tt if...elseif} structures
+to calculate $r$ and $\theta$ as a function of $x$ and $y$. Express
+the final results for $\theta$ in degrees. Test your program by
+evaluating the following cases:
+
+\[\begin{array}{l|l|p{1cm}p{1cm}}
+x & y & r & \theta \\ \hline
+2 & 0 &  & \\
+2 & 1 &  &  \\
+0 & 3 &  & \\
+-3 & 1 & & \\
+-2 & 0 & & \\
+-1 & -2 & & \\
+0 & 0 & \\
+0 & -2 & \\
+2 & 2 & \\
+\end{array}\]
+
+\vspace{1cm}
+
+\item Problem 3.20: A Cartesian vector can be thought of as representing
+magnitudes along the $x-$, $y-$, and $z-$ axes multiplied by a unit vector $(i,j,k)$.
+For such cases, the dot product of two of these vectors $\{a\}$ and $\{b\}$
+corresponds to the product of their magnitudes and the cosine of the angle between
+their tails as in $\{a \} \cdot \{b\} = ab \cos \theta$.
+
+The cross product yields another vector, $\{c\} = \{a \} \times \{ b\}$, which
+is perpendicular to the plane defined by $\{a\} $ and $\{ b\}$ such that its
+direction is specified by the right-hand rule. Develop an M-file function
+that is passed two such vectors and returns $\theta$, $\{c\}$ and the magnitude
+of $\{c\}$ and generates a three-dimensional plot of the three vectors $\{a\},\{b\}$
+and $\{c\}$ with their origins at zero. Use dashed lines for $\{a\}$ and $\{b\}$
+and a solid line for $\{c\}$. Test your function for the following cases:
+
+\begin{enumerate}[(a)]
+\item \begin{verbatim} a = [6 4 2]; b = [2 6 4];\end{verbatim}
+\item \begin{verbatim} a = [3 2 -6]; b = [4 -3 1];\end{verbatim}
+\item \begin{verbatim} a = [2 -2 1]; b = [4 2 -4];\end{verbatim}
+\item \begin{verbatim} a = [-1 0 0]; b = [0 -1 0];\end{verbatim}
+\end{enumerate}
+
+\end{enumerate}
+\begin{comment}
+
+\item Let $n$ be a positive integer.
+We would like to list all strictly increasing sequences of 
+positive integers with four terms: $a_1 < a_2 < a_3 < a_4$, such
+that $a_1 + a_2 + a_3 + a_4 = n$. Please write an m-file defining
+the function {\tt Sumfour(n)} which takes as input a positive integer,
+and prints to the screen one partition per line.
+
+For example, 
+\begin{verbatim}
+>> Sumfour(13)
+1 + 2 + 3 + 7 
+1 + 2 + 4 + 6 
+1 + 3 + 4 + 5
+\end{verbatim}
+Please submit your code, and the output of {\tt Sumfour(17)}.
+Hint: Your code might use a nested {\tt for} loop 
+and the {\tt fprintf} command.
+
+The Fibonacci sequence is defined as the sequence whose
+first two terms are $s_1 = s_2 = 1$ and whose $n$-th
+term  $s_n = s_{n-1} + s_{n-2'}$.
+
+Write a function {\tt Fibonacci} that takes as input
+a positive integer $n$ and prints every term 
+of the Fibonacci sequence until the last term before it exceeds $n$.
+\end{comment}
+
+
+\end{document}

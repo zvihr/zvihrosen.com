@@ -1,0 +1,73 @@
+\documentclass[12pt]{amsart}
+\usepackage[fullpage]{geometry}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+\newcommand{\RR}{\mathbb{R}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Math 320: Homework 6}
+Due: November 9, 2016
+\maketitle
+
+Please read through chapters 11, 12.1, and 13 in the textbook.
+Answer the following questions. Please submit all code
+and output with brief descriptions of what you are doing.
+
+\vspace{5mm}
+
+\begin{enumerate}
+
+\item Section 11.2 discusses various norms on matrices.
+In class, we reviewed three properties of any matrix norm $\rho$:
+\begin{enumerate}
+\item $\rho(a M) = a \rho(M)$ for scalar $a$ and matrix $M$.
+\item $\rho( M + N) \leq \rho(M) + \rho(N)$ for $M,N$ matrices.
+\item $\rho(M) = 0$ only if $M$ is the zero matrix.
+\end{enumerate}
+Prove that these properties are satisfied for 1) the column-sum
+norm, and 2) the spectral norm. \\ 
+{\bf Hint:} for the spectral norm,
+use the induced norm definition: 
+$||M||_2 = \sup(||Mx||_2 /||x||_2)$, where the
+norm on the right-hand side is the Euclidean norm on vectors.
+
+\vspace{5mm}
+
+\item Problem 11.9.
+
+\vspace{5mm}
+
+\item Problem 12.2. You may use the textbook implementation of
+Gauss-Seidel, but add a subroutine that at each iteration, plots the
+first two coordinates of the approximation.
+Display the plots for part (a) and part (b).
+
+\vspace{5mm}
+
+\item Consider a matrix $F$ which acts on a vector in
+$\RR^2$ by mapping $(x_1,x_2)$ to $(x_2, x_1 + x_2)$.
+
+\begin{enumerate}
+\item Write $F$ down explicitly.
+\item Let $v = [0,1]$. In a $2 \times 10$ matrix, 
+display $F^kv$ for $k = 0, 10$.
+\item What are the eigenvalues and eigenvectors of $F$?
+Use this to write an explicit formula for $F^k$.
+\item Use everything you have done so far to write a formula
+for the $k$-th Fibonacci number, where $F_0 = 0$ and $F_1 = 1$.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

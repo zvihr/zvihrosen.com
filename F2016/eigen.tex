@@ -1,0 +1,158 @@
+\documentclass[12pt]{beamer}
+\usetheme{Penn} 
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{verbatim}
+%\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{animate}
+\usetikzlibrary{matrix, shapes, arrows, calc, backgrounds}
+\usepackage[vcentermath, enableskew]{youngtab}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{alg}[thm]{Algorithm}
+\newtheorem{question}[thm]{Question}
+\begin{document}
+
+\author[Z. Rosen]{Zvi Rosen \\ Department of Mathematics}
+
+\date[\today]{\today}
+\title[Eigenvalue Algorithms]{{\Large How to Compute 
+Eigenvalues \& Eigenvectors}}
+\institute[Dept. of Mathematics~~--~~University of Pennsylvania]{}
+
+
+\frame{\titlepage}
+
+
+\begin{frame}
+\frametitle{Idea}
+We want to solve $Ax = \lambda x$ for a square $n \times n$ matrix $A$,
+a column vector $x$ and a scalar $\lambda$.
+
+$\lambda$ is an eigenvalue of $A$, and $x$ is an eigenvector of $A$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Power method}
+
+The power method is an iterative algorithm that uses $Ax =  \lambda x$ to
+find the {\bf largest} eigenvalue of $A$.
+
+Idea: Assume that all vectors $v \in \RR^n$ can be expressed as
+a weighted sum of eigenvectors. [Not always true, but we can work in this
+case.] Order the eigenvalues as $|\lambda_1| \geq \cdots \geq |\lambda_n|$, and
+associated eigenvectors $x_1,\ldots,x_n$.
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Power method II}
+Then if $v$ is chosen at random, we will have 
+$v = a_1 x_1 + \cdots + a_n x_n$, with all $a_i$'s nonzero,
+and $Av =  a_1 A x_1 + \cdots + a_n A x_n$ by linearity.
+
+$\Rightarrow Av = a_1 \lambda_1 x_1 + \cdots + a_n \lambda_n x_n
+ \Rightarrow A^Nv = a_1 \lambda_1^N x_1 + \cdots + a_n \lambda_n^N x_n$.
+
+If you normalize this vector, you obtain
+\[\dfrac{A^Nv}{||A^Nv||} = C \left( x_1 + \left(\dfrac{\lambda_2}{\lambda_1}\right)^N x_2 + \cdots +  \left(\dfrac{\lambda_n}{\lambda_1}\right)^Nx_N\right).\]
+
+As $N$ gets large, $x_1$ dominates the right-hand side.
+\end{frame}
+
+\begin{frame}
+\frametitle{MATLAB demonstration}
+
+We use the following loop to execute the power method until
+we have sufficiently low error:
+
+\vspace{1cm}
+
+{\tt while err > .001 } \\
+{\tt    w = A*x/norm(A*x);} \\
+{\tt  err = norm(w - x)/norm(x);}\\
+{\tt    x = w;}\\
+{\tt end}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Deflation for Symmetric Matrices}
+
+Symmetric matrices have a special property that 
+all eigenvectors are orthogonal to each other. I.e. the dot
+product of two eigenvectors is zero.
+
+Once we have the largest eigenvalue $\lambda_1$ for $A$, and its
+corresponding eigenvector $x_1$, we can
+redefine the matrix:
+\[ B = A - \lambda_1 x_1 x_1^T.\]
+This new matrix has all the same eigenvalues, except $\lambda_1$ is 
+replaced with zero. Repeating the power method here finds $\lambda_2$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Polynomial method}
+
+The equation $Ax = \lambda x $ can be reformulated as:
+\[( A - \lambda I) x = 0.\]
+Since multiplying $A - \lambda I$ by nonzero $x$ gives $0$, this means that
+the matrix $A - \lambda I$ is not invertible. If it were, we would have
+\[( A - \lambda I)^{-1}( A - \lambda I) x = ( A - \lambda I)^{-1}0 \iff x = 0.\]
+
+We know that a matrix has no inverse if and only if
+its determinant is zero, so we can think instead about:
+\[ \det(A - \lambda I) = 0.\]
+
+This is a degree $n$ polynomial in $\lambda$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Polynomials \& Eigenvalues in MATLAB}
+
+MATLAB can compute eigenvalues much quicker than it can 
+solve polynomials. In fact, it solves polynomials using 
+eigenvalue computation. If
+\[ p(x) = a_n x^n + \cdots + a_1 x + a_0\]
+Then the eigenvalues of the matrix
+\[ \left(\begin{array}{cccc}
+\frac{a_{n-1}}{a_n} & \cdots & \frac{a_{1}}{a_n} & \frac{a_{0}}{a_n} \\
+1 & 0 & \cdots & 0  \\
+0 & \ddots & 0 & 0 \\
+0 & \cdots & 1 & 0 \\
+\end{array} \right)
+\]
+are the roots of the polynomial $p(x)$.
+\end{frame}
+
+\begin{frame}
+\frametitle{MATLAB's {\tt eig} function}
+
+{\tt eig} uses the QR decomposition of a matrix which
+factors a matrix as the product of an orthogonal matrix
+and an upper-triangular matrix.\\
+
+It computes a sequence of decompositions until the
+upper-triangular matrix has the eigenvalues on the diagonal.\\
+
+The details of the algorithm will not be covered on the quiz
+(but would make a nice research project!)
+
+\end{frame}
+\end{document}

@@ -1,0 +1,389 @@
+<html> 
+<header>
+<title> Math 1B Discussion Section </title>
+</header>
+
+<!--<p style="font-family:verdana;font-size:110%;color:green"> -->
+
+<center>
+<table border="0">
+<tr>
+					</table>
+		</td>
+
+		<td>
+				<h1 style="text-align:left">
+						Math 1B
+				</h1>
+				<h3 style="text-align:left">
+						Sections 106 and 107
+				</h3>
+
+		</td>
+</tr>
+</table
+</center>
+<hr/>
+
+<p style="text-align:left"><b>GSI:</b> Zvi Rosen
+</p>
+
+<p style="text-align:left"><b>Email address: </b><script type="text/javascript">
+GoFish=new Array()
+GoFish[0]="%3c%61%20%68%72%65%66%3d%" + "22%6d%61%69%6c%74%6f%3a"
+GoFish[1]="zhrosen" + "%40%6d%61%74%68%2e%62%65%72%6b%"
+GoFish[2]="65%6c%65%79%2e%65%64%75%22%3e" + "zhrosen"
+GoFish[3]="%40%6d%61%74%68%2e%62%65%" + "72%6b%65%6c%65%79%2e%65%6"
+GoFish[4]="4%75%3c%2f%61%3e" + ""
+OutString="";
+for (j=0;j<GoFish.length;j++){
+OutString+=GoFish[j];
+}document.write(unescape(OutString));
+</script>
+</p>
+<br>
+
+<p style="text-align:left"><b>Office: </b>824 Evans
+</p>
+
+<p style="text-align:left"><b>NEW Office Hours:</b><br>
+&nbsp;&nbsp; Mon: 7:00 pm - 8:00 pm <br>
+&nbsp;&nbsp; Wed: 4:00 pm - 5:00 pm <br>
+</p>
+
+<p style="text-align:left">
+For course policy, a syllabus, and other information, please see the <a href="http://math.berkeley.edu/~simic/Spring12/Math1B/1B.html">course webpage</a>.
+<br>
+</p>		
+
+<hr/>
+
+<table cellspacing=0 cellpadding=3 border=1>
+
+<tr bgcolor=#e0e0ff>
+<th>Section</th>
+
+<th>Date</th>
+<th>Topic</th>
+<th>Links, Handouts, Etc.</th>
+</tr>
+
+<tr> <td colspan=4 bgcolor=#c0c0c0 height=1><img src=transp.gif alt="" width=1 height=1></td></tr>
+
+<TR align="center">
+
+<td>1</td>
+
+<TD>1/18</TD>
+<TD>7.1 Integration by parts</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk118.pdf">Worksheet 1</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk118s.pdf"> Solutions</a>, <a href="http://en.wikipedia.org/wiki/Integration_by_parts#Tabular_integration_by_parts">Wikipedia on Tabular Integration</a></td>
+</TR>
+
+<TR align="center">
+<td>2</td>
+<TD>1/20</TD>
+<TD>7.2 Trigonometric integrals </TD>
+</TR>
+
+<TR align="center">
+<td>3</td>
+
+<TD>1/23</TD>
+<TD>7.3 Trigonometric substitutions</TD>
+</TR>
+
+<TR align="center">
+<td>4</td>
+<TD>1/25</TD>
+<TD>7.4 Partial fractions </TD>
+</TR>
+
+<TR align="center">
+<td>5</td>
+
+<TD>1/27</TD>
+<TD>7.4 continued + 7.5 Strategy for integration</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-1.pdf">Quiz 1</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1soln.pdf"> Solution</a></td>
+</TR>
+
+<TR align="center">
+<td>6</td>
+<TD>1/30</TD>
+<TD>7.7 Approximate integration</TD>
+</TR>
+
+<TR align="center">
+<td>7</td>
+<TD>2/1</TD>
+<TD>7.8 Improper integrals</TD>
+<TD><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk125.pdf">Worksheet 2</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk125s.pdf">Solutions</a></TD>
+
+</TR>
+
+<TR align="center">
+<td>8</td>
+<TD>2/3</TD>
+<TD>8.1 Arc length</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-2.pdf">Quiz 2</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-2s.pdf">Solutions</a></td>
+
+</TR>
+
+<TR align="center">
+<td>9</td>
+
+<TD>2/6</TD>
+<TD>8.2 Area of a surface of revolution</TD>
+</TR>
+
+<TR align="center">
+<td>10</td>
+<TD>2/8</TD>
+<TD>8.3 Applications to physics and engineering</TD>
+</TR>
+
+<TR align="center">
+<td>11</td>
+
+<TD>2/10</TD>
+<TD>8.4 Applications to economics and biology + <br>
+8.5 Probability</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-3.pdf">Quiz 3</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-3s.pdf">Solutions</a></td>
+</TR>
+
+<TR align="center">
+<td>12</td>
+<TD>2/13</TD>
+<TD><b>Midterm 1</b></TD>
+</TR>
+
+<TR align="center">
+<td>13</td>
+<TD>2/15</TD>
+<TD>11.1 Sequences</TD>
+</TR>
+
+<TR align="center">
+<td>14</td>
+<TD>2/17</TD>
+<TD>11.2 Series</TD>
+<TD><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk217.pdf">Worksheet 3</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk217s.pdf">Solutions</a></TD>
+</TR>
+
+<TR align="center">
+<td>*</td>
+<TD>2/20</TD>
+<TD>Holiday, no class</TD>
+</TR>
+
+<TR align="center">
+<td>15</td>
+<TD>2/22</TD>
+<TD>11.2 continued</TD>
+
+</TR>
+
+<TR align="center">
+<td>16</td>
+<TD>2/24</TD>
+<TD>11.3 The integral test and estimates</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-4.pdf">Quiz 4</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-4s.pdf">Solutions</a>,<a href="http://math.berkeley.edu/~zhrosen/S2012-1B/problem79.pdf">Write-up of HW Problem 79</a> </td>
+</TR>
+
+<TR align="center">
+<td>17</td>
+<TD>2/27</TD>
+<TD>11.4 The comparison tests</TD>
+
+</TR>
+
+<TR align="center">
+<td>18</td>
+<TD>2/29</TD>
+<TD>11.5 Alternating series</TD>
+</TR>
+
+<TR align="center">
+<td>19</td>
+<TD>3/2</TD>
+<TD>11.6 Absolute convergence and ratio and root tests</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-5.pdf">Quiz 5</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-5s.pdf">Solutions</a></TD>
+</TR>
+
+<TR align="center">
+<td>20</td>
+<TD>3/5</TD>
+<TD>11.7 Strategy for series + 11.8 Power series</TD>
+</TR>
+
+<TR align="center">
+<td>21</td>
+<TD>3/7</TD>
+<TD>11.9 Representation of functions as power series</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/bayer-series-wk.pdf">Series Worksheet</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/bayer-series-wk-sol.pdf">Answers</a></TD>
+</TR>
+
+
+<TR align="center">
+<td>22</td>
+<TD>3/9</TD>
+<TD>11.9 continued</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-6.pdf">Quiz 6</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-6s.pdf">Solutions</a></TD>
+</TR>
+
+
+<TR align="center">
+<td>23</td>
+<TD>3/12</TD>
+
+<TD>11.10 Taylor and Maclaurin series</TD>
+</TR>
+
+
+<TR align="center">
+<td>24</td>
+<TD>3/14</TD>
+<TD>11.10 continued</TD>
+</TR>
+
+<TR align="center">
+<td>25</td>
+
+<TD>3/16</TD>
+<TD>11.1 Applications of Taylor polynomials</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-7.pdf">Quiz 7</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-7s.pdf">Solutions</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/series_tools.pdf">Series Guide</a></TD>
+</TR>
+
+<TR align="center">
+<td>26</td>
+<TD>3/18</TD>
+<TD>Midterm Review Session</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/1b-mt2-review.pdf">Midterm Review Questions</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/review-mt2.pdf">Midterm Tips & Tricks</a></TD>
+</TR>
+
+<TR align="center">
+<td>26</td>
+<TD>3/19</TD>
+<TD>Review</TD>
+</TR>
+
+<TR align="center">
+<td>27</td>
+
+<TD>3/21</TD>
+<TD><b>Midterm 2</b></TD>
+</TR>
+
+<TR align="center">
+<td>28</td>
+<TD>3/23</TD>
+<TD>9.1 Modeling with differential equations</TD>
+</TR>
+
+<TR align="center">
+<td>*</td>
+
+<TD>3/26-3/30</TD>
+<TD>Spring break</TD>
+</TR>
+
+<TR align="center">
+<td>29</td>
+<TD>4/2</TD>
+<TD>9.2 Direction fields and Euler's method</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk42.pdf">Integration/Implicit Diff Worksheet</a></td>
+</TR>
+
+<TR align="center">
+<td>30</td>
+
+<TD>4/4</TD>
+<TD>9.3 Separable equations</TD>
+</TR>
+
+<TR align="center">
+<td>31</td>
+<TD>4/6</TD>
+<TD>9.4 Models for population growth</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk46.pdf">Slope Fields & Sep. Equations Worksheet</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk46s.pdf">Solutions</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-8.pdf">Quiz 8</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-8s.pdf">Solutions</a> </td>
+</TR>
+
+<TR align="center">
+<td>32</td>
+
+<TD>4/9</TD>
+<TD>9.5 Linear equations</TD>
+</TR>
+
+<TR align="center">
+<td>33</td>
+<TD>4/11</TD>
+<TD>9.5 continued</TD>
+</TR>
+
+<TR align="center">
+<td>34</td>
+
+<TD>4/13</TD>
+<TD>9.6 Predator-prey systems</TD>
+<td><a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk413.pdf">2nd Order Worksheet</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/wk413s.pdf">Solutions</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-9.pdf">Quiz 9</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-9s.pdf">Solutions</a> </td>
+</TR>
+
+<TR align="center">
+<td>35</td>
+<TD>4/16</TD>
+<TD>17.1 Second-order linear equations</TD>
+</TR>
+
+<TR align="center">
+<td>36</td>
+
+<TD>4/18</TD>
+<TD>17.2 Nonhomogeneous linear equations</TD>
+</TR>
+
+<TR align="center">
+<td>37</td>
+<TD>4/20</TD>
+<TD>17.2 continued</TD>
+<TD> <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-10.pdf">Quiz 10</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-10s.pdf">Solutions</a> </TD>
+</TR>
+
+<TR align="center">
+<td>38</td>
+
+<TD>4/23</TD>
+<TD>17.3 Applications of second-order DEs</TD>
+</TR>
+
+<TR align="center">
+<td>39</td>
+<TD>4/25</TD>
+<TD>17.3 continued</TD>
+</TR>
+
+<TR align="center">
+<td>40</td>
+
+<TD>4/27</TD>
+<TD>17.4 Series solutions</TD>
+<TD> <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-11.pdf">Quiz 11</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/quiz1b-11s.pdf">Solutions</a>, <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/seriesprobs.pdf">Series Diff Eq. Problems</a></TD>
+</TR>
+
+<TR align="center">
+<TD>4/30-4/35</TD>
+<TD> </TD>
+<TD>REVIEW</TD>
+<TD> <a href="http://math.berkeley.edu/~zhrosen/S2012-1B/FinalReview1B.pdf">Anna & Ethan's Review Sheet</a> </TD>
+</TR>
+
+<tr> <td colspan=4 bgcolor=#c0c0c0 height=1><img src=transp.gif alt="" width=1 height=1></td></tr>
+
+</table>
+
+
+
+
+<br>
+ 
+</body> 
+</html> 

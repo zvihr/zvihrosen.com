@@ -1,0 +1,118 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+
+\DeclareMathOperator{\sign}{sign}
+
+\newtheorem{bigthm}{Theorem}   % Numbered separately, as A, B, etc.
+\newtheorem{thm}{Theorem}[section]   % Numbered within each section
+\newtheorem{alg}[thm]{Algorithm}   % Numbered within each section
+
+\newtheorem{cor}[thm]{Corollary}     % Numbered along with thm
+\newtheorem{lem}[thm]{Lemma}         % Numbered along with them
+\newtheorem{prop}[thm]{Proposition}  % Numbered along with them
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{subfact}[thm]{Sub-Fact} 
+\theoremstyle{definition} 
+\newtheorem{defn}[thm]{Definition}   % Numbered along with thm
+\newtheorem{conj}[thm]{Conjecture}        % Numbered along with thm
+\newtheorem{remark}{Remark}   
+\newtheorem{ex}[thm]{Example}        % Numbered along with thm
+\newtheorem{exercise}[thm]{Exercise}        % Numbered along with thm
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{question}[thm]{Question}
+\newtheorem{prob}[thm]{Problem}
+\newtheorem{ass}[thm]{Assumption}
+\renewcommand{\thenotation}{}  % to make the notation
+                               % environment unnumbered
+\newtheorem{terminology}{Terminology}
+\renewcommand{\theterminology}{}  % to make the terminology
+\newcommand{\Spec}{\mbox{Spec }}
+\newcommand{\Proj}{\mbox{Proj }}
+\newcommand{\Sym}{\mbox{Sym}}
+\newcommand{\Hom}{\mbox{Hom}}
+\newcommand{\Aut}{\mbox{Aut}}
+
+\newcommand{\mc}{\ensuremath{\mathcal}}
+\renewcommand{\skip}{\hspace{1cm}}
+
+\newcommand{\EE}{\ensuremath{\mathbb{E}}}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+
+\newcommand{\A}{\ensuremath{\mathbb{A}}}
+\newcommand{\p}{\ensuremath{\mathfrak{p}}}
+\newcommand{\m}{\ensuremath{\mathfrak{m}}}%\usepackage[breaklinks]{hyperref}
+\usepackage{amssymb}
+%\usepackage{fixltx2e}
+%\usepackage[version=3]{mhchem}
+\usepackage{fullpage}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{soul}
+
+\begin{document}
+
+\title{Math 320: Class notes}
+\maketitle
+
+
+{\bf Roots - Chapter 6}
+
+This chapter deals with open methods.
+
+\section{Newton's Method}
+
+\section{Secant Method}
+
+Analyzing the convergence of the secant method.
+
+Suppose we have a function with a simple root at $r$ and 3-times differentiable in a nbhd.
+\begin{align*}
+ x_{n+1} &= &x_n - \dfrac{f(x_n)(x_n - x_{n-1})}{f(x_n) - f(x_{n-1})}\\
+ x_{n+1} - r &= &(x_n - r) - \dfrac{f(x_n)((x_n -r) -  (x_{n-1}- r))}{f(x_n) - f(x_{n-1})}\\
+ E_{n+1} &= &E_n - \dfrac{f(x_n)(E_n - E_{n-1})}{f(x_n) - f(x_{n-1})}\\
+ E_{n+1} &= &E_n - \dfrac{(f'(r)E_n + \frac{f''(r)}{2} E_n^2 + O(E_n^3))\cdot (E_n - E_{n-1})}{f'(r) (E_n - E_{n-1}) + \frac{f''(r)}{2}(E_n^2 - E_{n-1}^2)} + O(E_n^3-E_{n-1}^3) \\
+ E_{n+1} &= &E_n - \dfrac{f'(r)(E_n - E_{n-1})(E_n + \frac{f''(r)}{2f'(r)} E_n^2 + O(E_n^3))}{f'(r)(E_n - E_{n-1})(1  + \frac{f''(r)}{2f'(r)}(E_n + E_{n-1}) + O(E_n^2+ E_n E_{n-1} + E_{n-1}^2))} \\
+ E_{n+1} &= &E_n - \dfrac{(E_n + \frac{f''(r)}{2f'(r)} E_n^2 + O(E_n^3))}{(1  + \frac{f''(r)}{2f'(r)}(E_n + E_{n-1}) + O(E_n^2+ E_n E_{n-1} + E_{n-1}^2))} \\
+ E_{n+1} &= &\dfrac{E_n(1  + \frac{f''(r)}{2f'(r)}(E_n + E_{n-1}) + O(E_n^2+ E_n E_{n-1} + E_{n-1}^2)) - (E_n + \frac{f''(r)}{2f'(r)} E_n^2 + O(E_n^3))}{(1  + \frac{f''(r)}{2f'(r)}(E_n + E_{n-1}) + O(E_n^2+ E_n E_{n-1} + E_{n-1}^2))} \\
+ E_{n+1} &= &\dfrac{E_n  + \frac{f''(r)}{2f'(r)}(E_n^2 + E_{n-1}E_n) + O(E_n^3+ E_n^2 E_{n-1} + E_nE_{n-1}^2)) 
+- (E_n + \frac{f''(r)}{2f'(r)} E_n^2 + O(E_n^3))}{(1  + \frac{f''(r)}{2f'(r)}(E_n + E_{n-1}) + O(E_n^2+ E_n E_{n-1} + E_{n-1}^2))} \\
+ E_{n+1} &= &\dfrac{\frac{f''(r)}{2f'(r)} E_{n-1}E_n + O(E_n^3+ E_n^2 E_{n-1} + E_nE_{n-1}^2)}{(1  + \frac{f''(r)}{2f'(r)}(E_n + E_{n-1}) + O(E_n^2+ E_n E_{n-1} + E_{n-1}^2))} \\
+ E_{n+1} &= &\frac{f''(r)}{2f'(r)} E_{n-1}E_n \left[\dfrac{1 + O(E_n^2/E_{n-1}+ E_n+ E_{n-1})}{1  + \frac{f''(r)}{2f'(r)}(E_n + E_{n-1}) + O(E_n^2+ E_n E_{n-1} + E_{n-1}^2)}\right] \\
+\implies E_{n+1} &=& C E_nE_{n-1} 
+\end{align*}
+
+What is the order of convergence? Take $q$ such that
+\[
+\lim_{n \to \infty} \dfrac{|E_{n+1}|}{|E_n|^q} = C \implies \lim_{n \to \infty} \dfrac{|C_2 \cdot E_nE_{n-1}|}{|E_n|^q} = C \]
+\[
+\implies \lim_{n \to \infty} \dfrac{|E_{n-1}|}{|E_n|^{q-1}} = C/C_2 \implies \lim_{n \to \infty} \dfrac{|E_{n}|^{q-1}}{|E_{n-1}|} =C_2/ C
+\]
+\[\implies \lim_{n \to \infty} \dfrac{|E_{n}|}{|E_{n-1}|^{1/(q-1)}} = (C_2/C)^{1/(q-1)}
+\]
+But the order of convergence can only take one value, so:
+\[
+1/(q-1) = q \implies q^2 - q - 1 = 0 \implies q = \frac{1}{2}(1 \pm \sqrt(5))
+\]
+And the true value is the golden mean.
+
+\end{document}

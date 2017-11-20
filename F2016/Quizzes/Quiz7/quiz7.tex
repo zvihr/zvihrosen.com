@@ -1,0 +1,43 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{lscape}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\flushright
+Name:\underline{\hspace{5cm}}
+\title{Math 320: Quiz 7}
+\maketitle
+
+\begin{enumerate}
+
+\item (4 points) Compute a least squares regression line
+fitting the three points $(0,0), (1,0),$ and $(1,1)$.
+\begin{enumerate}
+\item First, frame the regression as a linear algebra problem:
+$X^T X \beta = X^TY$.
+\item Then, solve for $\beta$ using your preferred technique.
+\end{enumerate}
+
+\vspace{12cm}
+
+\item (3 points) Compute the sum-of-squares residual error,
+and the correlation coefficient for this linear regression.
+
+\vfill
+\pagebreak
+
+\item (3 points) Find the Lagrange form of the interpolating polynomial
+for the points $(0,0),(1,1),(2,4)$.
+\end{document}

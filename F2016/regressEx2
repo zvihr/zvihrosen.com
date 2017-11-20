@@ -1,0 +1,60 @@
+%Linear Regression Example
+X = randn(1,100);
+Y = 4 + 2*X + randn(1,100);
+
+plot(X,Y,'.')
+
+p = polyfit(X,Y,1)
+
+Lx = [min(X)-1,max(X)+1]
+Ly = p(1)*Lx + p(2)
+
+plot(X,Y,'.',Lx,Ly);
+
+Xm = [ones(100,1), X'];
+Ym = Y';
+Xm'*Xm \ (Xm'*Ym)
+
+%Polynomial least-squares regression
+
+X = randn(1,100);
+Y = 1 + .1*X.^3 + X.^2 + 3*X + randn(1,100);
+
+p = polyfit(X,Y,3);
+
+Lx = linspace(min(X)-1,max(X)+1,200);
+Ly = p(1)*Lx.^3 + p(2)*Lx.^2 + p(3)*Lx + p(4);
+plot(X,Y,'.',Lx,Ly);
+
+Xm = [ones(100,1), X',X'.^2,X'.^3];
+Ym = Y';
+Xm'*Xm \ (Xm'*Ym)
+
+%Multilinear least-squares regression
+
+X1 = randn(1,100);
+X2 = randn(1,100);
+Y = 1 + X1 - 2*X2 + randn(1,100);
+
+Xm = [ones(100,1), X1',X2'];
+Ym = Y';
+p = Xm'*Xm \ (Xm'*Ym)
+
+[A,B] = meshgrid(-4:.05:4, -4:.05:4);
+Z = p(1) + p(2)*A + p(3)*B;
+plot3(A,B,Z,'b',X1,X2,Y,'.','r')
+
+%General least-squares regression
+
+X = 2*randn(1,200);
+Y = 1 + exp(X) + X.^2 + randn(1,200);
+
+plot(X,Y,'.')
+
+Xm = [ones(200,1), exp(X'),X',X'.^2];
+Ym = Y';
+p = Xm'*Xm \ (Xm'*Ym)
+
+Lx = linspace(min(X)-1,max(X)+1,200);
+Ly = p(1) + p(2)*exp(Lx) + p(3)*Lx + p(4)*Lx.^2;
+plot(X,Y,'.',Lx,Ly);

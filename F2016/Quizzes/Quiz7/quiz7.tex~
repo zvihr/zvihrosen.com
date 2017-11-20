@@ -1,0 +1,53 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{lscape}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\flushright
+Name:\underline{\hspace{5cm}}
+\title{Math 320: Quiz 6}
+\maketitle
+
+\begin{enumerate}
+
+\item (4 points) Compute the largest eigenvalue and
+its corresponding eigenvector using three iterations
+of the power method for the matrix
+\[A = \left[
+\begin{array}{ccc}
+1 & 2 & 3 \\
+2 & -1 & 3 \\
+1 & 0 & 1 \\
+\end{array} \right].
+\] 
+Let $x_0= [1,1/2,1/4]$ and iterate $x_{i+1} = Ax_{i}/\lambda_{i}$, where
+$\lambda_i =$ largest coordinate of $ Ax_i$. Please compute $x_3$ and
+$\lambda_3$.
+
+
+\item (3 points) Write down a matrix whose characteristic polynomial
+is $x^3 + 5x^2 - x + 1$.
+
+
+\item (3 points) Compute the following vector 
+norms for the vector $[3,-2,1,4]$: 
+\begin{enumerate}
+\item $1$-norm, 
+\item $2$-norm, 
+\item $\infty$-norm.
+\end{enumerate}
+
+
+\end{document}

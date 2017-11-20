@@ -1,0 +1,151 @@
+\documentclass[12pt]{amsart}
+\usepackage[fullpage]{geometry}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Math 320: Homework 4}
+Due: September 30, 2016
+\maketitle
+
+Please read through chapters 5 and 6 in the textbook.
+Answer the following questions. Please submit all code
+and output with brief descriptions of what you are doing.
+
+\vspace{5mm}
+
+\begin{enumerate}
+
+\item Problem 7.7.
+
+Let $f(x) = 4x -  1.8x^2 + 1.2x^3 - 0.3x^4$.
+\begin{enumerate}
+\item Golden-section search ($x_l = -2, x_u = 4, \epsilon_s = 1\%$).
+
+To implement the golden section search, we use the following code,
+which corrects several errors in the textbook's code. It also
+saves time by evaluating the function at each new point only once.
+
+\begin{verbatim}
+function [x, fx, ea, iter]=goldmin(f,xl,xu,es,maxit,varargin)
+
+phi = (1 + sqrt(5))/2;
+iter = 0;
+d = (phi - 1)*(xu - xl);
+x1 = xl + d; 
+x2 = xu - d;
+fprintf('x1 = %f, x2 = %f \n', x1,x2);
+fx1 = f(x1); fx2 = f(x2);
+while(1)
+    if fx1 < fx2
+        xopt = x1;
+        xl = x2;
+        x2 = x1; fx2 = fx1;
+        d = (phi - 1)*(xu - xl);
+        x1 = xl + d; fx1 = f(x1);
+    else
+        xopt = x2;
+        xu = x1;
+        x1 = x2; fx1 = fx2;
+        d = (phi - 1)*(xu - xl);
+        x2 = xu - d; fx2 = f(x2);
+    end
+    fprintf('x1 = %f, x2 = %f \n', x1,x2);
+    iter = iter + 1;
+    if xopt ~= 0, ea = abs((xu - xl)/xopt)*100; end
+    if ea <= es | iter >= maxit, break, end
+end
+x = xopt; fx = f(xopt);
+end
+
+\end{verbatim}
+
+\item Parabolic Interpolation ($x_1 = 1.75, x_2 = 2, x_3 = 2.5$, iterations
+$= 5$).
+
+
+
+\end{enumerate}
+
+\item Problem 7.37
+
+\item Problem 8.3
+
+\item Problem 8.9
+
+\[
+\begin{array}{ccccccccccccc}
+& & Q_{01}c_{01} & + & Q_{31} c_3 & = & Q_{15} c_1 & + & Q_{12} c_1 &  & \\
+& & & & Q_{12} c_1 & = & Q_{25} c_2 & + & Q_{24} c_2 & + & Q_{23} c_2 \\
+& & Q_{03} c_{03} & + & Q_{23} c_2 & = & Q_{31} c_3 & + & Q_{34} c_3 \\
+Q_{24} c_2 & + & Q_{34} c_3 & + & Q_{54} c_5 & = & Q_{44} c_4 \\
+& & Q_{15} c_1 & + & Q_{25} c_2 & = & Q_{54} c_5 & + & Q_{55} c_5 \\
+\end{array}
+\]
+
+Reformulating to translate into a matrix equation:
+
+\[ {\tiny
+\begin{array}{ccccccccccccc}
+(Q_{15} + Q_{12}) c_1  & +  & & &  - Q_{31}c_{3} &  & & & &  = &  Q_{01} c_{01}\\
+Q_{12} c_1 & + & (-Q_{25} - Q_{24} - Q_{23})c_2 & & & & & & & = & 0 \\
+ &  & - Q_{23}c_2 & + & (Q_{31} + Q_{34})c_3 & & & & &  = &  Q_{03} c_{03} \\
+& & Q_{24} c_2 & + & Q_{34} c_3 & + & (- Q_{44})c_4 & + & Q_{54} c_5 & = & 0 \\
+Q_{15} c_1 & + & Q_{25} c_2 & & & & & + & (-Q_{54} - Q_{55}) c_5 & = & 0\\
+\end{array}}
+\]
+
+And as a matrix equation,
+\[{\small \left(
+\begin{array}{ccccc}
+(Q_{15} + Q_{12})  & 0 &   - Q_{31} & 0  & 0 \\
+Q_{12}   & (-Q_{25} - Q_{24} - Q_{23}) & 0 & 0 & 0  \\
+0  & - Q_{23}  & (Q_{31} + Q_{34}) & 0 & 0   \\
+0 & Q_{24}  & Q_{34}  & - Q_{44}  & Q_{54} \\
+Q_{15}  & Q_{25} & 0 & 0 & (-Q_{54} - Q_{55}) \\
+\end{array} \right)
+\left(
+\begin{array}{c}
+c_1 \\ c_2 \\ c_3 \\ c_4 \\ c_5
+\end{array}
+\right) = 
+\left( \begin{array}{c}
+ Q_{01} c_{01} \\ 0  \\ Q_{03} c_{03} \\ 0 \\ 0
+\end{array} \right)}
+\]
+Then inserting our values for all the $Q$ and $c$ variables, we have:
+
+\[ \left(
+\begin{array}{ccccc}
+9 & 0 & -3 & 0 & 0 \\
+4 & -4 & 0 & 0 & 0 \\
+0 & -2 & 9 & 0 & 0 \\
+0 & 1 & 6 & -9 & 2 \\
+5 & 1 & 0 & 0 & -6 \\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+c_1 \\ c_2 \\ c_3 \\ c_4 \\ c_5
+\end{array}
+\right) = 
+\left( \begin{array}{c}
+120 \\ 0  \\ 350 \\ 0 \\ 0
+\end{array} \right)
+\]
+\end{enumerate}
+
+The solution is then $(28.4,28.4,45.2,39.6,28.4)$.
+\end{document}

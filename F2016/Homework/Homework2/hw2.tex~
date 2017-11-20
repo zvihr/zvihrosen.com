@@ -1,0 +1,67 @@
+\documentclass[12pt]{amsart}
+\usepackage[fullpage]{geometry}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Math 320: Homework 2}
+Due: September 16, 2016
+\maketitle
+
+Please read through sections 4.1 - 4.3 in the textbook.
+Then answer the following questions. Please submit all code
+and output with brief descriptions of what you are doing.
+
+\vspace{1cm}
+
+\begin{enumerate}
+
+\item Prove that a base-$n$ representation is unique.
+
+\vspace{1cm}
+
+\item (Problem 4.4) For computers, the machine epsilon
+$\epsilon$ can also be thought of as the smallest number that
+when added to one gives a number greater than $1$. An algorithm
+based on this idea can be developed as
+\begin{itemize}
+\item[Step 1:] Set $\epsilon = 1$.
+\item[Step 2:] If $1 + \epsilon$ is less than or equal to $1$, then
+go to Step 5. Otherwise go to Step 3.
+\item[Step 3:] $\epsilon = \epsilon/2$.
+\item[Step 4:] Return to Step 2.
+\item[Step 5:] $\epsilon = 2 \times \epsilon$.
+\end{itemize}
+Write your own M-file based on this algorithm to determine
+the machine epsilon. Validate the result by comparing it with
+the value computed with the built-in function {\tt eps}.
+
+\vspace{1cm}
+
+\item (Problem 4.11) The Maclaurin series expansion
+for $\cos x$ is:
+\[ \cos x = 1 - \dfrac{x^2}{2} + \dfrac{x^4}{4!} - \dfrac{x^6}{6!}
++ \dfrac{x^8}{8!} - \cdots \]
+Starting with the simplest version, $\cos x = 1$, add terms one
+at a time to estimate $\cos(\pi/4)$. After each new term is added,
+compute the true and approximate percent relative errors.
+Determine the true value. Add terms until the absolute value of
+the approximate error estimate falls below an error criterion
+conforming to two significant figures.
+
+\end{enumerate}
+
+
+\end{document}

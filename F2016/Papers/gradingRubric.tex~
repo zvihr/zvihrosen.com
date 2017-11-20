@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\pagestyle{empty}
+
+%\usepackage[top=.6in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\itemsep}{0pt}
+
+\begin{document}
+{\bf \large Math 320 -- Computer Methods in the Mathematical Sciences I.}\\
+
+\vspace{3mm}
+
+{\bf \large Project Title:}\\
+{\bf \large Authors:}\\
+
+\vspace{3mm}
+
+\section{Presentation}
+{\bf \large Comments:}
+\begin{itemize}
+\item
+\end{itemize}
+
+\item Slides do a good job of giving intution.
+\item You do a nice job of addressing your audience directly,
+and answering people's questions.
+{\bf \large Grade:}
+
+\begin{enumerate}
+\item {\bf Clarity.} Does your presentation clearly and
+in an organized way, present your ideas?
+\item {\bf Engagement.} Does the presentation engage the audience
+in your topic?
+\item {\bf Content.} Is the material included in the presentation 
+valid and relevant?
+\item {\em For group projects:} {\bf Teamwork.} Were both members 
+of the group involved in the presentation?
+\end{enumerate}
+
+\section{Paper}
+
+{\bf \Large Comments:}
+\begin{itemize}
+\item
+\end{itemize}
+
+\begin{enumerate}
+\item {\bf Clarity.} 
+\item {\bf Level of difficulty.} 
+\item {\bf Accuracy.} 
+\item {\em For group projects:} {\bf Teamwork.}
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <title> Zvi Rosen </title>
+  </head>
+  <body>
+  <div>
+		<img src = "http://math.berkeley.edu/sites/default/files/imagecache/photo_faculty/graduate/photos/pictureedit.jpg">
+        <h1>
+        	Zvi Rosen
+		</h1>
+		<h3>	
+			Department of Mathematics<br/>
+            University of California, Berkeley
+        </h3>
+        <p>
+			<b> Office: </b> 
+            826 Evans Hall
+            <br>
+            Berkeley, CA 94720
+    </p>
+    <p> 
+<!--The code below hides e-mail address from spambots--> 
+			<b> E-mail: </b>
+			<script type="text/javascript">
+        GoFish=new Array()
+        GoFish[0]="%3c%61%20%68%72%65%66%3d%" + "22%6d%61%69%6c%74%6f%3a"
+        GoFish[1]="%7a%68%72%6f%73%65%6e" + "%40%6d%61%74%68%2e%62%65%72%6b%"
+        GoFish[2]="65%6c%65%79%2e%65%64%75%22%3e" + "%7a%68%72%6f%73%65%6e"
+        GoFish[3]="%40%6d%61%74%68%2e%62%65%" + "72%6b%65%6c%65%79%2e%65%6"
+        GoFish[4]="4%75%3c%2f%61%3e" + ""
+        OutString="";
+        for (j=0;j<GoFish.length;j++){
+        OutString+=GoFish[j];
+        }document.write(unescape(OutString));
+      </script>
+    </p>
+    
+    </div>
+
+    <div>
+      <h4>
+				About Me:
+      </h4>
+
+      <p>
+				I am a second-year PhD student in Mathematics at <a href="http://www.berkeley.edu">Berkeley</a>. My advisor is <a href="http://math.berkeley.edu/~bernd/">Bernd Sturmfels</a>. I completed a BA and MA in Mathematics at the University of Pennsylvania.
+      </p>
+
+      <p>
+				My CV is available upon request.
+      </p>
+    </div>
+
+    <div>
+      <h4>Research:
+      </h4>
+
+      <h5>Areas of interest:
+      </h5>
+
+          <ul>
+            <li>Algebraic Combinatorics</li>
+            <li>Commutative Algebra</li>
+            <li>Algebraic Geometry</li>
+          </ul>
+
+      <p>I am particularly interested in studying algebraic and geometric objects by understanding their underlying combinatorial structure.
+			</p>
+
+      <h5>Written Research:
+      </h5>
+
+      <ol>
+        <li><a href="http://arxiv.org/abs/1201.5010">
+				Line arrangements modeling curves of high degree: equations, syzygies and secants</a>, joint with Jessica Sidman, Peter Vermeire, and Gregory Burnham based on undergraduate research (submitted).</li>
+      </ol>
+    </div>
+   
+
+    <div>
+
+      <h4>Courses:  
+      </h4>
+
+      <p><a href="http://www.math.berkeley.edu/~zhrosen/courses/courses.html">Full list</a> of courses taken at Berkeley, including some notes.
+      </p>
+      <h5>Selected Coursework:
+      </h5>
+
+      <ol><li><a href="http://www.math.berkeley.edu/~zhrosen/graphcurves.pdf"> Graph Curves</a>, an exposition written for Prof. Sturmfels' Algebraic Curves course.</li>
+      </ol>
+    </div>
+
+   
+
+    <div>
+			<h4>Teaching:    
+      </h4>
+
+      <ul>
+        <li><i> Fall 2011: </i> <a href=	"http://www.math.berkeley.edu/~zhrosen/F2011-1B/F2011-1B.html">Math 1B</a>, taught by Per Persson <br>
+        </li>
+        <li><i> Spring 2012:</i> <a href=	"http://www.math.berkeley.edu/~zhrosen/S2012-1B/S2012-1B.html">Math 1B</a>, taught by Slobodan Simi&#263;</li>
+      </ul>
+    </div>
+
+   
+
+    <div>
+      <h4>Conferences Attended:    
+      </h4>
+      <ul>
+
+        <li>ECCO'12, Encuentro Colombiano de Combinatoria, Bogot&aacute, Colombia, June 2012.
+          <ul>
+            <li>Organized by Federico Ardila.</li>
+
+            <li> <a href="http://www.math.berkeley.edu/~zhrosen/conf/ecco12.html"> 						Here</a> are my notes + other resources.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+   
+<!--    <div>
+
+      <h4>Miscellaneous:    
+      </h4>
+     
+      <p>My name is pronounced "tsvee" like the boldfaced section of "Ca<span>ts vee</span>red." I respond to anything close!</p>
+
+      <p>My hobbies include: studying <a href="">ancient Aramaic legal texts</a>, <a href="">puzzling</a>, hiking, biking, and playing guitar.
+      </p>
+    </div>-->
+  </body>
+</html>

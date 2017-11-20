@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jesse Dunietz</title>
+    <link href="styles.css" rel="stylesheet" media="screen" />
+    <script type="text/javascript">
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-51812561-1', 'auto');
+     ga('send', 'pageview');
+    </script>
+    <script type="text/javascript">
+     function setCurrentTab() {
+         var navLinks = document.getElementById('nav').getElementsByTagName('a');
+         var currentLoc = document.location.href;
+         var hashIndex = currentLoc.indexOf("#");
+         if (hashIndex != -1) {
+             currentLoc = currentLoc.substring(0, hashIndex);
+         }
+         for (var i = 0; i < navLinks.length; ++i) {
+             var link = navLinks[i];
+             if (currentLoc == link.href ||
+                 (i == 0 &&
+                  link.href.substring(0, document.location.href.length) == currentLoc)) {
+                 link.className = "current";
+                 break;
+             }
+         }
+     }
+
+     function setUpPDFTracking() {
+         var makeClickTracker = function(link) {
+             return function() {
+                 ga('set', 'page', link.pathname);
+                 ga('send', 'pageview');
+             }
+         };
+
+         var links = document.getElementsByTagName('a');
+         for (var i = 0; i < links.length; ++i) {
+             var link = links[i];
+             if (link.pathname.endsWith('.pdf')) {
+                 link.onclick = makeClickTracker(link);
+             }
+         }
+     }
+    </script>
+  </head>
+  <body onload="setCurrentTab(); setUpPDFTracking()">
+    <div id="container">
+      <div id="top_spacer"></div>
+      <div id="wrapper">
+        <div id="banner">
+          <h1>Jesse Dunietz</h1>
+        </div>
+        <div id="nav">
+          <ul>
+      	    <li><a href="index.html" data-title="Home">Home</a></li>
+            <!--<li><a href="CV.pdf" data-title="CV">CV</a></li>-->
+            <li><a href="research.html" data-title="Research/Publications">Research/Publications</a></li>
+            <li><a href="teaching.html" data-title="Teaching">Teaching</a></li>
+            <li><a href="scicomm.html" data-title="Science Communication">Science Communication</a></li>
+            <li><a href="jesse-dunietz-resume.pdf" data-title="Resume">Resume</a></li>
+          </ul>
+        </div>
+
+        <div id="page">
+          <div id="content">
+
+
+            <div id="sidebar-wrapper">
+                <div id="sidebar">
+                    <img src="img/photo.jpg" title="Jesse Dunietz photo" id="personal_photo" />
+                    <div id="contact">
+                        <dl>
+                            <dt>Email:</dt>
+                            <dd><a href="mailto:jdunietz@cs.cmu.edu">jdunietz@cs.cmu.edu</a></dd>
+                            <dt>Office:</dt>
+                            <dd>GHC 6008</dd>
+                            <dt>Address:</dt>
+                            <dd>Computer Science Dept. <br/>5000 Forbes Avenue<br/> Pittsburgh, PA, 15213</dd>
+                            <dt>Twitter:</dt>
+                            <dd><a href="https://twitter.com/jdunietz">@jdunietz</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+        <div id="footer">
+          Zvi Rosen<br/>
+          Department of Statistics <br/>
+          University of California, Berkeley
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{longtable,array,color,xcolor}
+\usepackage[colorlinks = true,
+            urlcolor  = blue]{hyperref}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\newcommand\narrowstyle{\SetTracking{encoding=*}{-50}\lsstyle}
+
+\setlength{\parindent}{0pt}
+
+
+\DeclareMathOperator{\sign}{sign}
+
+\newtheorem{bigthm}{Theorem}   % Numbered separately, as A, B, etc.
+\newtheorem{thm}{Theorem}[section]   % Numbered within each section
+\newtheorem{alg}[thm]{Algorithm}   % Numbered within each section
+
+\newtheorem{cor}[thm]{Corollary}     % Numbered along with thm
+\newtheorem{lem}[thm]{Lemma}         % Numbered along with them
+\newtheorem{prop}[thm]{Proposition}  % Numbered along with them
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{subfact}[thm]{Sub-Fact} 
+\theoremstyle{definition} 
+\newtheorem{defn}[thm]{Definition}   % Numbered along with thm
+\newtheorem{conj}[thm]{Conjecture}        % Numbered along with thm
+\newtheorem{remark}{Remark}   
+\newtheorem{ex}[thm]{Example}        % Numbered along with thm
+\newtheorem{exercise}[thm]{Exercise}        % Numbered along with thm
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{question}[thm]{Question}
+\newtheorem{prob}[thm]{Problem}
+\newtheorem{ass}[thm]{Assumption}
+\renewcommand{\thenotation}{}  % to make the notation
+                               % environment unnumbered
+\newtheorem{terminology}{Terminology}
+\renewcommand{\theterminology}{}  % to make the terminology
+\newcommand{\Spec}{\mbox{Spec }}
+\newcommand{\Proj}{\mbox{Proj }}
+\newcommand{\Sym}{\mbox{Sym}}
+\newcommand{\Hom}{\mbox{Hom}}
+\newcommand{\Aut}{\mbox{Aut}}
+
+\newcommand{\mc}{\ensuremath{\mathcal}}
+\renewcommand{\skip}{\hspace{1cm}}
+
+\newcommand{\EE}{\ensuremath{\mathbb{E}}}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+
+\newcommand{\A}{\ensuremath{\mathbb{A}}}
+\newcommand{\p}{\ensuremath{\mathfrak{p}}}
+\newcommand{\m}{\ensuremath{\mathfrak{m}}}%\usepackage[breaklinks]{hyperref}
+\usepackage{amssymb}
+%\usepackage{fixltx2e}
+%\usepackage[version=3]{mhchem}
+\usepackage{fullpage}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{soul}
+
+\begin{document}
+
+\title{Math 320: Class notes}
+\maketitle
+
+
+\section{Error - Chapter 4}
+
+An algorithm is a set of rules that gives instructions for
+a sequence of operations. Often takes some input and performs
+a calculation.
+
+An iterative algorithm is an algorithm that iterates (or repeats),
+providing a better answer at each step.
+
+\begin{defn}
+Suppose an algorithm yields an approximate answer $\hat{x}$ for some
+unknown $x$. \begin{enumerate} 
+\item Error is defined as $E_t = x - \hat{x}$.
+\item Relative error is $\epsilon_t = \dfrac{x - \hat{x}}{x}$.
+\end{enumerate}
+
+\end{defn}
+
+\begin{defn}
+Suppose an iterative algorithm yields a sequence of approximations 
+$(\hat{x}_{k})_{k = 1,2,\ldots,n}$. Then we define: \begin{enumerate}
+\item Approximate error is $E_a = x_n - x_{n-1}$ 
+\item Approximate relative error: $\epsilon_a = \dfrac{x_n - x_{n-1}}{x_n}$.
+\end{enumerate}
+We can take a stopping criterion $\epsilon_s$ such that 
+the algorithm stops when $|\epsilon_a| < \epsilon_s$.
+\end{defn}
+
+Error can also arise from roundoff errors in computation.
+
+\subsection{How are numbers stored in computers}
+
+\begin{defn}
+A base-$n$ number system is a system of representing
+rational numbers as a sum of powers of $n$.
+
+The base-$10$ number system, or decimal system, uses
+powers of $10$.
+\end{defn}
+
+\begin{ex}
+134.57 is equal to
+\[ 1 * 10^2 + 3 * 10^1 + 4 * 10^0 + 5 * 10^{-1} + 7 * 10^{-2}\]
+\end{ex}
+
+\begin{defn}
+The signed magnitude method sets aside the first bit to denote
+the sign, and the remaining bits denote the number. $1$ means a 
+negative number. Since $\pm 0$ is redundant, the number $-0$ is
+taken to be the number $-2^{n-1}$.
+\end{defn}
+
+\begin{defn}
+Double precision floating point representation looks like
+\[\pm s \times b^e. \]
+$s$ is called the significand (or mantissa), 
+$b$ is the base of the number system,
+and $e$ is the exponent. $s$ is written with one (nonzero) digit to the
+left of the decimal point.
+\end{defn}
+
+When $b = 10$, this is called scientific notation.
+Computers use $b = 2$ with $11$ bits set aside for a signed
+exponent, and $52$ bits for a mantissa.
+
+\begin{defn}
+An overflow error occurs when numbers are larger than the  allotted
+maximum. An underflow error occurs if it is smaller than the minimum.
+\end{defn}
+
+\begin{defn}
+Roundoff error happens in computations when the true answer
+is rounded off losing some small $\epsilon$.
+
+Machine epsilon is defined as the smallest value $\epsilon$ such
+that $1 + \epsilon \neq 1$, i.e. $\epsilon$ is the smallest value
+within our precision.
+\end{defn}
+
+If you were to add $.1 + .01$ in a number system with only one significant
+bit in the mantissa, the second term would be rounded off.
+Furthermore if a number does not have a finite binary expansion,
+even simple operations can yield small roundoff errors that accumulate.
+
+\begin{ex}
+Consider $\frac{1}{10}$ in binary. Suppose we round off to 5 digits.
+Perform the addition.
+\end{ex}
+
+
+\begin{defn}
+An infinite series is the limit of $n$-th partial sums of a sequence
+as $n \to \infty$.
+\end{defn}
+
+For example, geometric series.
+
+\begin{defn}
+Truncation error is the error made by approximating an infinite sum
+by a finite sum.
+\end{defn}
+
+\begin{thm}[Taylor's theorem]
+Let $k \geq 1$ be an integer, and let $f : \RR \to \RR$ be $k$-times
+differentiable at $a$. Then
+\[
+f(x) = f(a) + \dfrac{f'(a)}{1!}(x-a) + \dfrac{f''(a)}{2!}(x-a)^2 + \cdots
++ \dfrac{f^{(k)}(a)}{k!}(x-a)^k + h_k(x) ( x- a)^{k}
+\]
+with $h_k(x) \to 0$ as $x \to a$.
+\end{thm}
+
+\begin{proof}
+Use L'Hopital's rule $k$ times.
+\end{proof}
+
+Explicit formula for remainder:
+
+\begin{thm}
+Suppose $f$ is $k+1$ times differentiable on the open
+interval $(x,a)$ and continuous on the closed interval, then the remainder term 
+\[ R_k = \dfrac{f^{(k+1)}(x^*)}{(k+1)!} (x - a)^{k+1}.\]
+where $x^*$ is a number in the open interval $(x_0,x)$.
+\end{thm}
+
+\begin{defn}
+Let $f$ and $g$ be two functions of a real variable.
+Then, $f(x) = O(g(x))$ as $x \to a$ if there are positive
+numbers $M,\delta$ such that
+$|f(x)| \leq M|g(x)|$ for all $x$ such that $|x -a| \leq \delta$.
+Read aloud as 'f is big-O of g'.
+\end{defn}
+
+$R_k(x)$ is big-O of $(x-a)^{k+1}$.
+
+\begin{cor}
+Suppose we want an error bound for an approximation
+$f(x)$ using a Taylor polynomial of degree $k$. If we
+have a uniform bound on $f^{(k+1)}$, this gives a bound
+on $R_k$.
+\end{cor}
+
+\begin{ex}
+\[
+\log(1+x) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \cdots
+\]
+Let us approximate $\log(1.5)$ using the first three terms of the the
+Taylor series. $.5 - .125 + .0417 = .4167$. The remainder term
+is
+\[R_3 = \dfrac{f^{(4)}(x^*)}{4!} (.5)^4\]
+The fourth derivative is strictly decreasing:
+\[ f^{(4)}(x) = (-1)^4 4! (1+x)^{-4}  \leq 4!. \Rightarrow R_3 \leq .0625.\]
+
+Therefore, $\log(1.5) \in (.3542,.4792)$. True answer $\approx .4055$.
+\end{ex}
+
+
+
+\end{document}

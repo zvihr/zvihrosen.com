@@ -1,0 +1,7 @@
+  This directory contains your public html files and folders. All
+files you wish to make available for to the world wide web should be
+world readable. All subdirectories must also be world executable.
+Please be aware that files and directories which you place here will
+be read and possibly cached by internet search engines; exercise
+appropriate caution when publishing information here.
+

@@ -1,0 +1,13 @@
+\frametitle{Using MATLAB to solve linear systems}
+
+Let $A$ be an $n\times n$ square matrix defining a
+system of linear algebraic equations as $A \vec{x} = \vec{b}$.
+
+\vspace{5mm}
+
+The following commands in MATLAB solve for $x$.
+\begin{verbatim}
+x = A\b;
+x = inv(A)*b;
+\end{verbatim}
+
