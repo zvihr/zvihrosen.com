@@ -1,0 +1,79 @@
+h1 {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 900;
+	color: #412786}
+h2 {
+	font-family: Lato;
+	font-style: bold;
+	font-variant: normal;
+	font-weight: 900;
+	color: #412786}
+h3 {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 1000;
+	color: #412786}
+p {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	text-align: justify;
+	color: #412786}
+
+table {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	text-align: justify;
+	color: #412786}
+
+th {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 900;
+	color: #412786}
+ul {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	text-align: justify;
+	color: #412786}
+a {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 650;
+	color: #412786}
+b {
+	font-family: Lato;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 900;
+	color: #412786}
+
+blockquote {
+	font-family: Lato;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: Lato;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5667px;
+}
+table {margin-left: 2em;}
+a {text-decoration: none; color: #4a237c}
+body {background-color: #ffffff}
