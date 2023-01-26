@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" href="favicon.ico"/>
+
+        <title>Zvi H. Rosen | MAC 2233 | Fall 2022</title>
+
+  </head>
+  <body>
+    <div class="container" id="central">
+      <ul class="text-center list-inline">
+	      <li class="list-inline-item"> <a href="index.html">Home</a></li>
+	      <li class="list-inline-item"> <a href="bio.html">About Me</a></li>
+	      <li class="list-inline-item"> <a href="rosenCV.pdf">CV</a></li>
+	      <li class="list-inline-item"> <a href="research.html">Research</a> </li>
+	      <li class="list-inline-item"> <a href="teaching.html">Teaching</a> </li>
+	      <li class="list-inline-item"> <a href="notes-code.html">Notes & Code</a> </li>
+	      <li class="list-inline-item"> <a href="misc.html">Misc</a> </li>
+	    </ul>
+      <div class="row align-items-end">
+	<div class="col-12">
+	  <img src="teaching2.JPG"/>
+	  <h1>MAC 2233 -- Fall 2022</h1>
+	</div>
+      </div>
+    </div>
+    <div class="container">
+
+          <p class="no-indent">
+	<b>Lecture Times: </b> Asynchronous <br/>
+	<b>Class Location: </b> <a href="https://canvas.fau.edu/courses/127058/">Canvas Site</a> <br/>
+	  </p>
+	  
+      <p class="no-indent">
+	<b>Instructor:</b> <a href="index.html"> Zvi Rosen</a> <br/>
+	<b>Email address: </b> rosenz@fau.edu<br/>
+	<b>Office: </b>Science Building (SE-43) 224<br/>
+	<b>Office Hours:</b> Thursday: 10 am - 12 pm (Zoom)
+      </p>
+
+	  <p>
+	    This course introduces business students to the incredible tools
+	    of the differential and integral calculus. Numerous examples and
+	    applications from business are used as motivation. 
+	    </p>
+	  <p>
+	    <i>From the FAU Catalog</i>: A descriptive and intuitive introduction to the methods and applications of differentiation and integration. Primarily for social science and business administration majors. This section is restricted to Business majors only. This is a General Education course and counts toward the Gordon Rule computational requirement.
+	  </p>
+
+	  <p>
+	    <h4>Course Syllabus:</h4><a href="F2022-2233/syllabus.pdf"> MAC 2233 Syllabus</a>.
+	    </p>
+	  
+      <p class="no-indent">
+	Most class business -- including homework and quizzes -- 
+	will be managed on the <a href="canvas.fau.edu">Canvas</a> site.
+      </p>
+    </div>
+  </body>
+
+
+</html>
