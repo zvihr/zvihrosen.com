@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="favicon.ico"/>
+
+    <title>Zvi H. Rosen | MAS 4306 / 5312 | Fall 2023</title>
+  </head>
+
+  <body>
+    <div class="container" id="central">
+      <ul class="text-center list-inline">
+        <li class="list-inline-item"><a href="index.html">Home</a></li>
+        <li class="list-inline-item"><a href="bio.html">About Me</a></li>
+        <li class="list-inline-item"><a href="rosenCV.pdf">CV</a></li>
+        <li class="list-inline-item"><a href="research.html">Research</a></li>
+        <li class="list-inline-item"><a href="teaching.html">Teaching</a></li>
+        <li class="list-inline-item"><a href="notes-code.html">Notes &amp; Code</a></li>
+        <li class="list-inline-item"><a href="misc.html">Misc</a></li>
+      </ul>
+
+      <div class="row align-items-end">
+        <div class="col-12">
+          <img src="teaching2.JPG"/>
+          <h1>MAS 4306 / 5312 — Fall 2023</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <p class="no-indent">
+        <b>Course:</b> MAS 4306 / MAS 5312 — Intro to Abstract Algebra II<br/>
+        <b>Department:</b> Department of Mathematical Sciences<br/>
+        <b>Credit Hours:</b> 3<br/>
+        <b>CRN:</b> 11091 / 10775<br/>
+        <b>Prerequisites:</b> MAS 4304 / MAS 5311 (Intro to Abstract Algebra I)
+      </p>
+
+      <p class="no-indent">
+        <b>Lecture Times:</b> MWF 2:00 pm – 3:20 pm<br/>
+        <b>Class Location:</b> Science Building (SE-43) 215
+      </p>
+
+      <p class="no-indent">
+        <b>Instructor:</b> <a href="index.html">Zvi Rosen</a><br/>
+        <b>Email address:</b> rosenz@fau.edu<br/>
+        <b>Office:</b> Science Building (SE-43), Room 224<br/>
+        <b>Office Hours:</b> Wednesday 11:00 am – 12:00 pm; Thursday (Zoom) 11:00 am – 12:00 pm<br/>
+        <b>Graduate Teaching Assistant:</b> Matthew Trang<br/>
+        <b>TA Email:</b> ttrang2019@fau.edu
+      </p>
+
+      <p>
+        This course is the second semester of the abstract algebra sequence, continuing the study of
+        groups, rings, and fields and emphasizing their interaction through modules, field extensions,
+        and Galois theory. Building on the first semester, the focus shifts toward rings, modules,
+        fields, and the Galois correspondence, with sustained attention to examples, counterexamples,
+        and clear mathematical communication.
+      </p>
+
+      <p>
+        <i>From the FAU Catalog:</i> (MAS 4306) A continuation of Introductory Abstract Algebra I, covering
+        rings and ideals, polynomials and factorization, vector spaces and modules, linear
+        transformations, and classical Galois theory. (MAS 5312) Continuation of MAS 5311, including
+        groups and homomorphisms, Sylow theorems, finite abelian groups, field theory, polynomial
+        rings, and the fundamental theorem of Galois theory.
+      </p>
+
+      <p class="no-indent">
+        Most course business will be handled on the
+        <a href="https://canvas.fau.edu">Canvas</a> site. This is an in-person course taught in a flipped
+        classroom format: readings and short video lectures are assigned before class, followed by
+        brief lecture and in-class problem solving.
+      </p>
+
+      <p>
+        <h4>Course Syllabus:</h4>
+        <a href="S2024-5312/syllabus.pdf">MAS 4306 / 5312 Syllabus</a>.
+      </p>
+
+    </div>
+
+  </body>
+
+</html>

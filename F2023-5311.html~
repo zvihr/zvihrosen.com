@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Zvi H. Rosen | MAS 4304 / 5311 | Fall 2023</title>
+</head>
+
+<body>
+  <div class="container" id="central">
+    <ul class="text-center list-inline">
+      <li class="list-inline-item"><a href="index.html">Home</a></li>
+      <li class="list-inline-item"><a href="bio.html">About Me</a></li>
+      <li class="list-inline-item"><a href="rosenCV.pdf">CV</a></li>
+      <li class="list-inline-item"><a href="research.html">Research</a></li>
+      <li class="list-inline-item"><a href="teaching.html">Teaching</a></li>
+      <li class="list-inline-item"><a href="notes-code.html">Notes & Code</a></li>
+      <li class="list-inline-item"><a href="misc.html">Misc</a></li>
+    </ul>
+    <div class="row align-items-end">
+      <div class="col-12">
+        <img src="teaching2.JPG" />
+        <h2>MAS 4304 / 5311 -- Fall 2023</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="no-indent">
+      <b>Lecture Times:</b> MWF 2:00 PM – 3:20 PM<br />
+      <b>Class Location:</b> Sanson Life Sciences (SC-1) 178
+    </p>
+
+    <p class="no-indent">
+      <b>Instructor:</b> <a href="index.html">Dr. Zvi Rosen</a><br />
+      <b>Email address:</b> rosenz@fau.edu<br />
+      <b>Office:</b> SE 224<br />
+      <b>Office Hours:</b>
+    <ul>
+      <li>Monday: 12:30 PM – 1:30 PM</li>
+      <li>Wednesday: 12:30 PM – 1:30 PM</li>
+    </ul>
+    </p>
+
+    <p class="no-indent">
+      <b>Graduate Teaching Assistant:</b> Matthew Trang<br />
+      <b>Email:</b> ttrang2019@fau.edu
+    </p>
+
+    <p>
+      <b>Credit Hours:</b> 3<br />
+      <b>CRN:</b> 11305 / 10759<br />
+      <b>Prerequisites:</b> Mathematical maturity appropriate to fourth year undergraduate or first year graduate student status.
+    </p>
+
+    <p>
+      This course explores three increasingly specific algebraic structures: groups, rings, and fields.
+      Groups involve a single well-behaved operation; rings include two operations—addition and multiplication—with more constraints; and fields impose full commutativity and invertibility on multiplication.
+      These topics interact deeply, culminating in Galois theory.
+      In this two-semester sequence, we begin with group and ring theory and examine the foundational ideas that have inspired generations of mathematicians.
+    </p>
+
+    <p>
+      <i>From the FAU Catalog</i>:<br />
+      <b>MAS 4304:</b> Course covers basic structures of abstract and linear algebra, such as groups, rings and ideals, polynomials and factorization, vector spaces and modules, linear transformations, and the classical Galois theory of fields.<br />
+      <b>MAS 5311:</b> Groups, subgroups, and homomorphisms, the Sylow theorems, the structure theorem for finite abelian groups, elementary theory of fields and polynomial rings, the fundamental theorem of Galois theory.
+    </p>
+
+    <p>
+      <h4>Course Syllabus:</h4>
+      <a href="F2023-5311/syllabus.pdf">MAS 4304 / 5311 Syllabus</a>.
+    </p>
+
+    <p class="no-indent">
+      Most class business -- including homework and announcements -- will be handled on the <a href="https://canvas.fau.edu">Canvas</a> site.
+    </p>
+  </div>
+</body>
+
+</html>
