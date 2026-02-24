@@ -5,3 +5,18 @@ Please be aware that files and directories which you place here will
 be read and possibly cached by internet search engines; exercise
 appropriate caution when publishing information here.
 
+
+## Local preview and templates
+
+This site now uses GitHub Pages-compatible Jekyll templates to avoid duplicated page chrome:
+
+- `_layouts/default.html` contains the shared HTML `<head>`, top navigation include, and footer include.
+- `_includes/header.html` centralizes navigation links used across pages.
+- `_includes/footer.html` contains the shared footer.
+- Content pages use Jekyll front matter (for example, `layout: default`) and keep only page-specific body content.
+
+To preview locally:
+
+1. Install Jekyll/Bundler (if not already available): `gem install bundler jekyll`
+2. From the repository root, run: `bundle exec jekyll serve`
+3. Open the local URL shown in the terminal (usually `http://127.0.0.1:4000`).
