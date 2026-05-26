@@ -1,83 +1,128 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zvi H. Rosen · About</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="site.css">
+  <script src="https://kit.fontawesome.com/182bc02155.js" crossorigin="anonymous"></script>
+  <script src="nav.js" defer></script>
+</head>
+<body>
 
+<main>
+  <div class="wrap">
 
-<html>
-
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-        <link rel="shortcut icon" href="favicon.ico"/>
-
-        <title> Zvi H. Rosen | About Me</title>
-
-  </head>
-  <body>
-    <div class="container" id="central">
-      	    <ul class="text-center list-inline">
-	      <li class="list-inline-item"> <a href="index.html">Home</a></li>
-	      <li class="list-inline-item"> <a href="bio.html">About Me</a></li>
-	      <li class="list-inline-item"> <a href="rosenCV.pdf">CV</a></li>
-	      <li class="list-inline-item"> <a href="research.html">Research</a> </li>
-	      <li class="list-inline-item"> <a href="teaching.html">Teaching</a> </li>
-	      <li class="list-inline-item"> <a href="notes-code.html">Notes & Code</a> </li>
-	      <li class="list-inline-item"> <a href="misc.html">Misc</a> </li>
-	    </ul>
-
-      <div class="row align-items-end">
-	<div class="col-8">	  
-	  <img src="profileB.JPG">
-	</div>
-	  <div class="col-4"> <h1>Bio</h1> </div>
+    <header class="page-header">
+      <div class="page-header__title">
+        <p class="eyebrow">Bio</p>
+        <h1>About Me</h1>
       </div>
-    </div>
-    <div class="container">
+    </header>
 
+    <section>
+      <p class="lead-text">
+        I was born and raised in Springfield, MA. In 2007, I enrolled at the
+        <a href="https://www.upenn.edu">University of Pennsylvania</a>, where I participated
+        in the submatriculation program, working toward a B.A. and M.A. simultaneously.
+        In the summer of 2009, I participated in the
+        <a href="https://www.mtholyoke.edu/acad/math/reu">Mount Holyoke REU</a>
+        directed by Prof. <a href="http://www.mtholyoke.edu/~jsidman/">Jessica Sidman</a> —
+        my first time conducting mathematical research.
+      </p>
+      <p>
+        In 2011, I moved to <a href="https://www.berkeley.edu">Berkeley</a> to pursue my Ph.D.
+        I signed on with my advisor <a href="https://math.berkeley.edu/~bernd/">Bernd Sturmfels</a>
+        in my second year, and I received my Ph.D. in 2015 after submitting my thesis
+        <a href="http://digitalassets.lib.berkeley.edu/etd/ucb/text/Rosen_berkeley_0028E_15261.pdf"><i>Algebraic Matroids in Applications</i></a>.
+      </p>
+      <p>
+        After graduating from Berkeley, I moved to Penn State for a 6-month period to continue
+        neural codes research as a postdoc with Prof. <a href="http://www.personal.psu.edu/vui1/">Vladimir Itskov</a>.
+        Between January 2016 and August 2018, I was a postdoc in the
+        <a href="http://people.eecs.berkeley.edu/~yss/group.html">Song Lab</a>, first
+        at Penn as a Simons Math+X Postdoctoral Fellow, then at U.C. Berkeley.
+        In August 2018, I began an assistant professor position in the
+        <a href="http://www.math.fau.edu/">Department of Mathematics</a> at
+        <a href="http://fau.edu/">Florida Atlantic University</a>.
+      </p>
+    </section>
 
-      <h4>Education</h4>
-      <ul>
-	<li>Ph.D. Mathematics, University of California, Berkeley, May 2015</li>  
-	<b>Advisor</b>: <a href="https://math.berkeley.edu/~bernd/">Bernd Sturmfels</a> <br/>
-	<b>Thesis</b>: <a href="http://digitalassets.lib.berkeley.edu/etd/ucb/text/Rosen_berkeley_0028E_15261.pdf">Algebraic Matroids in Applications</a>
-	<li>M.A. Mathematics, University of Pennsylvania, May 2011</li>
-	<b>Master's Thesis</b>: Graded Betti Numbers of Graph Curves. <br/>
-	<i>Completed jointly with the B.A. under the submatriculation program at Penn.</i>
-	<li>B.A. Mathematics, University of Pennsylvania, Dec 2010 </li>
+    <section>
+      <h3 class="section-title">Education</h3>
+      <ul class="timeline">
+        <li>
+          <span class="when">May 2015</span>
+          <span class="what">
+            <span class="role">Ph.D. Mathematics</span>
+            <span class="place">University of California, Berkeley</span>
+            <span style="display:block; font-family: var(--sans); font-size: 14px; color: var(--ink-2); margin-top:6px;">
+              <b>Advisor:</b> <a href="https://math.berkeley.edu/~bernd/">Bernd Sturmfels</a><br>
+              <b>Thesis:</b> <a href="http://digitalassets.lib.berkeley.edu/etd/ucb/text/Rosen_berkeley_0028E_15261.pdf">Algebraic Matroids in Applications</a>
+            </span>
+          </span>
+        </li>
+        <li>
+          <span class="when">May 2011</span>
+          <span class="what">
+            <span class="role">M.A. Mathematics</span>
+            <span class="place">University of Pennsylvania</span>
+            <span style="display:block; font-family: var(--sans); font-size: 14px; color: var(--ink-2); margin-top:6px;">
+              <b>Thesis:</b> Graded Betti Numbers of Graph Curves.<br>
+              <i>Completed jointly with the B.A. under the submatriculation program at Penn.</i>
+            </span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Dec 2010</span>
+          <span class="what">
+            <span class="role">B.A. Mathematics</span>
+            <span class="place">University of Pennsylvania</span>
+          </span>
+        </li>
       </ul>
-      
-      <h4>Positions</h4>
-      <ul>
-	<li><b>Assistant Professor</b>, Aug 2018--<br/> 
-	  Department of Mathematics, Florida Atlantic University</li>
-	<li><b>Postdoctoral Researcher</b>, Sep 2017-Aug 2018<br/> 
-	  Department of Statistics, University of California, Berkeley</li>
-	<li><b>Simons Math+X Postdoctoral Fellow</b>, Jan 2016-Aug 2017 <br/> 
-	  Departments of Mathematics & Biology, University of Pennsylvania</li>
-	<li><b>Postdoctoral Researcher</b>, Jun 2015-Dec 2015<br/>
-	  Department of Mathematics, Penn State University  </li>
+    </section>
+
+    <section>
+      <h3 class="section-title">Positions</h3>
+      <ul class="timeline">
+        <li>
+          <span class="when">Aug 2018 – present</span>
+          <span class="what">
+            <span class="role">Assistant Professor</span>
+            <span class="place">Department of Mathematics, Florida Atlantic University</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Sep 2017 – Aug 2018</span>
+          <span class="what">
+            <span class="role">Postdoctoral Researcher</span>
+            <span class="place">Department of Statistics, University of California, Berkeley</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Jan 2016 – Aug 2017</span>
+          <span class="what">
+            <span class="role">Simons Math+X Postdoctoral Fellow</span>
+            <span class="place">Departments of Mathematics &amp; Biology, University of Pennsylvania</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">Jun 2015 – Dec 2015</span>
+          <span class="what">
+            <span class="role">Postdoctoral Researcher</span>
+            <span class="place">Department of Mathematics, Penn State University</span>
+          </span>
+        </li>
       </ul>
-      <br/>
-            <h4>Short Bio</h4> <br/>
-      <p> I was born and raised in Springfield, MA. In 2007, I enrolled at the
-      <a href="https://www.upenn.edu">University of Pennsylvania</a>, where I participated in the submatriculation program,
-      working toward a B.A. and M.A. simultaneously. In the summer of 2009,
-      I participated in the <a href="https://www.mtholyoke.edu/acad/math/reu">Mount Holyoke REU</a>
-	directed by Prof. <a href="http://www.mtholyoke.edu/~jsidman/">Jessica Sidman</a>; this was
-      my first time conducting mathematical research. In 2011, I moved
-      to <a href="https://www.berkeley.edu">Berkeley</a> to pursue my Ph.D. I signed on with my advisor 
-	<a href="https://math.berkeley.edu/~bernd/">Bernd Sturmfels</a> in my second year,
-      and I received my Ph.D. in 2015 after submitting my thesis 
-      <a href="http://digitalassets.lib.berkeley.edu/etd/ucb/text/Rosen_berkeley_0028E_15261.pdf"><i>Algebraic Matroids in Applications</i></a>. </p>
-      
-      <p>After graduating from Berkeley, I moved to Penn State for a 6-month period 
-	to continue neural codes research as a postdoc with
-      Prof. <a href="http://www.personal.psu.edu/vui1/">Vladimir Itskov</a>. Between January 2016 and August 2018, I was a postdoc in the
-      <a href="http://people.eecs.berkeley.edu/~yss/group.html"> Song Lab</a>, first
-      at Penn as a Simons Math+X Postdoctoral Fellow, then at U.C. Berkeley.
-      In August 2018, I began an assistant professor position in the
-      <a href="http://www.math.fau.edu/">Department of Mathematics</a> at
-      <a href="http://fau.edu/">Florida Atlantic University</a>.</p>
-    </div>
-</div>
+    </section>
+
+  </div>
+</main>
 
 </body>
 </html>

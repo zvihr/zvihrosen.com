@@ -1,83 +1,83 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zvi H. Rosen · Misc</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="site.css">
+  <script src="https://kit.fontawesome.com/182bc02155.js" crossorigin="anonymous"></script>
+  <script src="nav.js" defer></script>
+</head>
+<body>
 
+<main>
+  <div class="wrap">
 
-<html>
-
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="favicon.ico"/>
-
-    <title>Zvi H. Rosen | Misc</title>
-
-  </head>
-  <body>
-   <div class="container" id="central">
-      	    <ul class="text-center list-inline">
-	      <li class="list-inline-item"> <a href="index.html">Home</a></li>
-	      <li class="list-inline-item"> <a href="bio.html">About Me</a></li>
-	      <li class="list-inline-item"> <a href="rosenCV.pdf">CV</a></li>
-	      <li class="list-inline-item"> <a href="research.html">Research</a> </li>
-	      <li class="list-inline-item"> <a href="teaching.html">Teaching</a> </li>
-	      <li class="list-inline-item"> <a href="notes-code.html">Notes & Code</a> </li>
-	      <li class="list-inline-item"> <a href="misc.html">Misc</a> </li>
-	    </ul>
-    <div class="row align-items-end">
-	<div class="col-8">
-	  <img src="whiteboardB.jpg"/>
-	</div>
-	<div class="col-4">
-	  <h1>Misc</h1>
-	</div>
+    <header class="page-header">
+      <div class="page-header__title">
+        <p class="eyebrow">Links, reading, ephemera</p>
+        <h1>Misc</h1>
       </div>
-    </div>
-    
-        <div class="content">
-	<div class="container">
-	  <div>
-	    <ul>
-	      <li> Good blogs on math and related topics:
-		<ol>
-		  <li> <a href="https://terrytao.wordpress.com/">Terry Tao</a></li>
-		  <li> <a href="https://scottaaronson.blog/">Shtetl Optimized</a></li>
-		  <li> <a href="https://quomodocumque.wordpress.com/">Quomodocumque</a></li>
-		  <li> <a href="https://mattbaker.blog/">Matt Baker's Blog</a></li>
-		</ol>
-		<li> Fun math-y webcomics:
-<ol>
-		<li> <a href="https://mathwithbaddrawings.com/">Math with Bad Drawings</a></li>
-	      <li> <a href="https://xkcd.com/">xkcd.</a></li>
-	    	  </ol>
-	      <li> Some favorite Math channels on YouTube:
-		<ol>
-		  <li> <a href="https://www.youtube.com/c/3blue1brown">3Blue1Brown</a></li>
-		  <li> <a href="https://www.youtube.com/user/standupmaths">Standup Maths</a></li>
-		  <li> <a href="https://www.youtube.com/channel/UCIyDqfi_cbkp-RU20aBF-MQ">Prof Richard Borcherds</a></li>
-		  <li> <a href="https://www.youtube.com/c/Mathologer">Mathologer</a></li>
-		  <li> <a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
-		  </ol>
-	      <li> I put together this website based on an HTML/CSS
-	    course on <a href="http://www.codecademy.com">Codecademy</a>.</li>
-	    <li> I passed my Language exam at Berkeley with the help of
-	    <a href="http://www.duolingo.com">Duolingo</a>.</li>
+    </header>
 
-	    <li> <a href="http://www.npr.org/2013/01/06/168698679/scrambling-to-ring-in-the-new-year">My fifteen minutes of fame</a>.
-	    </li>
+    <section>
+      <h3 class="section-title">Good blogs on math &amp; related topics</h3>
+      <ul class="note-list">
+        <li><span class="term">Blog</span><span class="what"><a class="title" href="https://terrytao.wordpress.com/">Terry Tao</a></span></li>
+        <li><span class="term">Blog</span><span class="what"><a class="title" href="https://scottaaronson.blog/">Shtetl-Optimized</a><span class="meta">Scott Aaronson</span></span></li>
+        <li><span class="term">Blog</span><span class="what"><a class="title" href="https://quomodocumque.wordpress.com/">Quomodocumque</a><span class="meta">Jordan Ellenberg</span></span></li>
+        <li><span class="term">Blog</span><span class="what"><a class="title" href="https://mattbaker.blog/">Matt Baker's Blog</a></span></li>
+      </ul>
+    </section>
 
-	    <li> Here are a couple of gifs I made with ImageMagick:
-	      <br>
-	  <img src="monodromy.gif" alt="" class="img-thumbnail" width="200" height="250">
+    <section>
+      <h3 class="section-title">Math-y webcomics</h3>
+      <ul class="note-list">
+        <li><span class="term">Comic</span><span class="what"><a class="title" href="https://mathwithbaddrawings.com/">Math with Bad Drawings</a></span></li>
+        <li><span class="term">Comic</span><span class="what"><a class="title" href="https://xkcd.com/">xkcd</a></span></li>
+      </ul>
+    </section>
 
-	  <img src="orderingVoronoi1.gif" alt="" class="img-thumbnail" width="200" height="250">
-	</li>
-    </div>
-    </div>
-    </div>
+    <section>
+      <h3 class="section-title">Favorite math channels on YouTube</h3>
+      <ul class="note-list">
+        <li><span class="term">YouTube</span><span class="what"><a class="title" href="https://www.youtube.com/c/3blue1brown">3Blue1Brown</a></span></li>
+        <li><span class="term">YouTube</span><span class="what"><a class="title" href="https://www.youtube.com/user/standupmaths">Standup Maths</a></span></li>
+        <li><span class="term">YouTube</span><span class="what"><a class="title" href="https://www.youtube.com/channel/UCIyDqfi_cbkp-RU20aBF-MQ">Prof Richard Borcherds</a></span></li>
+        <li><span class="term">YouTube</span><span class="what"><a class="title" href="https://www.youtube.com/c/Mathologer">Mathologer</a></span></li>
+        <li><span class="term">YouTube</span><span class="what"><a class="title" href="https://www.youtube.com/user/numberphile">Numberphile</a></span></li>
+      </ul>
+    </section>
 
-<div class="foot">
+    <section>
+      <h3 class="section-title">Odds &amp; ends</h3>
+      <p>
+        I originally put together this website based on an HTML/CSS course on
+        <a href="http://www.codecademy.com">Codecademy</a>.
+      </p>
+      <p>
+        I passed my Language exam at Berkeley with the help of
+        <a href="http://www.duolingo.com">Duolingo</a>.
+      </p>
+      <p>
+        Here are <a href="http://www.npr.org/2013/01/06/168698679/scrambling-to-ring-in-the-new-year">my fifteen minutes of fame</a>.
+      </p>
+    </section>
+
+    <section>
+      <h3 class="section-title">A couple of gifs I made with ImageMagick</h3>
+      <div class="gif-row">
+        <img src="img/monodromy.gif" alt="Monodromy animation">
+        <img src="img/orderingVoronoi1.gif" alt="Ordering Voronoi animation">
+      </div>
+    </section>
 
   </div>
+</main>
 
-
-</body> </html>
-
+</body>
+</html>
